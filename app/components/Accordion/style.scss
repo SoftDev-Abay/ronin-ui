@@ -1,0 +1,113 @@
+@use "../../../styles//colors.scss" as *;
+
+.accorodion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  .accordion-item {
+    padding: 0px 56px;
+    // max-width: 643.05px;
+    // max-width: 643.05px;
+    border-radius: 16px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    .header {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+
+      .title {
+        font-family: Articulat;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 49.68px;
+        opacity: 0.6;
+      }
+    }
+    .content {
+      margin-top: 8px;
+      position: relative;
+
+      border-left: 2px solid;
+      border-image-source: $gradient-color-primary;
+      padding: 0px 20px;
+
+      font-family: Articulat;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+
+      color: $color-text;
+
+      //  before
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: $gradient-color-primary;
+      }
+    }
+
+    &.active {
+      padding: 48px 56px;
+
+      box-shadow: 0px 40px 80px 0px #1713411a, 4px 4px 26px 0px #ffffff40 inset,
+        0px 4px 2px 0px #ffffff40 inset, 0px -4px 2px 0px #201a750d inset;
+
+      background-color: $gradient-color-primary;
+    }
+  }
+}
+
+@media (max-width: 1268px) {
+  .accorodion-wrapper {
+    gap: 30px;
+    .accordion-item {
+      padding: 0px 25px !important;
+
+      &.active {
+        padding: 38px 25px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1115px) {
+  .accorodion-wrapper {
+    gap: 44px;
+    .accordion-item {
+      .header {
+        justify-content: space-between;
+      }
+
+      padding: 0px 56px !important;
+
+      &.active {
+        padding: 48px 56px !important;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .accorodion-wrapper {
+    gap: 44px;
+    .accordion-item {
+      padding: 0px 20px !important;
+
+      .header {
+        gap: 0 !important;
+        justify-content: space-between;
+      }
+
+      &.active {
+        padding: 38px 20px !important;
+      }
+    }
+  }
+}

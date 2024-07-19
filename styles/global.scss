@@ -1,0 +1,36 @@
+@use "./colors.scss" as *;
+@import "fonts.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: rgba(51, 51, 51, 1);
+}
+
+.highlighted {
+  color: rgba(110, 182, 60, 1);
+}
+
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: $color-primary;
+
+  /* Create the gradient. */
+  background-image: $gradient-color-primary;
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}

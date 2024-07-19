@@ -1,0 +1,14 @@
+$color-secondary: #f3fbff;
+
+$color-linear-preloader: #6eb63c;
+// background: radial-gradient(106.95% 165.85% at 81.53% 18.51%, #22AFFF 0%, #1261FC 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+$gradient-color-primary: radial-gradient(
+  106.95% 165.85% at 81.53% 18.51%,
+  #22afff 0%,
+  #1261fc 100%
+);
+$color-primary: #1261fc;
+$color-text: #1c1f39;
+$color-black: #090c21;
+// : #F3FBFF this will be
+$color-white: #f3fbff;

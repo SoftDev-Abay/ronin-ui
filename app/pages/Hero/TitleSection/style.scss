@@ -1,0 +1,140 @@
+@use "../../../../styles/colors.scss" as *;
+
+:root {
+  --color-white-100: hsl(206, 0%, 100%);
+  --color-white-200: hsl(206, 0%, 90%);
+  --color-white-300: hsl(206, 0%, 80%);
+  --color-white-400: hsl(206, 0%, 65%);
+  --color-white-500: hsl(206, 0%, 50%);
+
+  --color-black-100: hsl(217, 30%, 18%);
+  --color-black-200: hsl(217, 27%, 15%);
+  --color-black-300: hsl(217, 27%, 12%);
+  --color-black-400: hsl(217, 52%, 9%);
+}
+
+.title-section {
+  overflow: hidden;
+  padding: 0 36px;
+
+  p {
+    text-wrap: balance;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    outline: none;
+    background: none;
+  }
+
+  img,
+  video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  // Banners
+  .banner {
+    position: relative;
+    display: grid;
+    align-items: center;
+    row-gap: 32px;
+    // grid-template-columns: 1fr;
+    // justify-content: center;
+
+    // Responsive Media Query
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      // background-color: red;
+      // margin-top: 4rem;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      grid-template-columns: 1fr max-content;
+      column-gap: 2rem;
+    }
+
+    &-image {
+      display: block;
+      max-width: 400px;
+      height: auto;
+      object-fit: cover;
+      justify-self: center;
+      order: 1;
+      max-width: 448px;
+
+      @media only screen and (min-width: 1024px) {
+        max-width: 528px;
+        height: auto;
+      }
+    }
+
+    &-inner {
+      max-width: 987px;
+      h1 {
+        font-family: Articulat CF;
+        font-size: 84px;
+        font-weight: 600;
+        line-height: 96px;
+        margin-bottom: 48px;
+        color: $color-black;
+      }
+      p {
+        font-family: Articulat CF;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 44px;
+        color: $color-black;
+        max-width: 600px;
+        margin-bottom: 112px;
+
+        @media (max-width: 1024px) {
+          margin-bottom: 12px;
+        }
+      }
+      .button-wrapper {
+        button {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          padding: 16px 44px 12px 44px;
+          border-radius: 52px;
+          background: $gradient-color-primary;
+          box-shadow: -10px 8px 19.1px 0px #04289f29;
+
+          color: $color-white;
+          font-family: Articulat CF;
+          font-size: 36px;
+          font-weight: 700;
+          line-height: 49.68px;
+          animation: float 5s ease-in-out infinite;
+        }
+        @media (max-width: 1024px) {
+          position: absolute;
+          bottom: 100px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
