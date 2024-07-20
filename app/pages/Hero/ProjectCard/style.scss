@@ -1,0 +1,47 @@
+@use "../../../../styles/colors.scss" as *;
+
+.project-card {
+  // max-width: 792px;
+  // width: 792px;
+  // height: 792px;
+
+  .project-card-img {
+    width: 100%;
+    max-height: 694px;
+    // min-height: 300px;
+
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 4px 4px 26px 0px #ffffff40 inset,
+      0px 4px 2px 0px #ffffff40 inset, 0px -4px 24.7px 0px #201a750d inset;
+    margin-bottom: 32px;
+  }
+  .project-card-title {
+    font-family: Articulat;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 82.8px;
+    margin-bottom: 8px;
+    color: $color-black;
+  }
+  .project-card-description {
+    font-family: Articulat;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33.12px;
+    margin-bottom: 8px;
+    color: $color-black;
+  }
+  .project-card-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    .project-card-category {
+      font-family: Articulat;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 33.12px;
+      color: #bfbdca;
+    }
+  }
+}

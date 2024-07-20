@@ -34,3 +34,23 @@ body {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
+
+.hightlighted-btn {
+  height: max-content;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 44px 12px 44px !important;
+  border-radius: 52px !important;
+  background: $gradient-color-primary !important;
+  box-shadow: -10px 8px 19.1px 0px #04289f29 !important;
+
+  color: $color-white !important;
+  font-family: Articulat;
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  line-height: 49.68px !important;
+  animation: float 5s ease-in-out infinite;
+  border: none !important;
+}

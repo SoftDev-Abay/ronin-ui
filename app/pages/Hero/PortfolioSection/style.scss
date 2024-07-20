@@ -1,0 +1,48 @@
+.portfolio-section {
+  padding: 150px 36px 180px 36px;
+
+  .title {
+    font-family: Articulat;
+    font-size: 84px;
+    font-weight: 600;
+    line-height: 115.92px;
+    margin-bottom: 169px;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "main main"
+      "project1 project2"
+      "see-more see-more";
+    row-gap: 140px;
+    column-gap: 48px;
+
+    .main {
+      grid-area: main;
+    }
+    .project1 {
+      grid-area: project1;
+    }
+    .project2 {
+      grid-area: project2;
+    }
+    .see-more {
+      grid-area: see-more;
+      display: flex;
+      justify-content: space-between;
+      .see-more-project {
+        flex: 1;
+        // max-width: 1072px;
+      }
+      .button-wrapper {
+        flex: 1;
+        max-width: 560px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

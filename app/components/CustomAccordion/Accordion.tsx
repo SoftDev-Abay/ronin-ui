@@ -51,9 +51,13 @@ interface AccordionProps {
   items: AccordionItem[];
 }
 
-const Accordion = ({ items, setActiveIndex, activeIndex }: AccordionProps) => {
+const CustomAccordion = ({
+  items,
+  setActiveIndex,
+  activeIndex,
+}: AccordionProps) => {
   return (
-    <div className="accorodion-wrapper">
+    <div className="accordion-wrapper">
       {items.map((item, index) => (
         <AccordionItem
           key={index}
@@ -70,4 +74,4 @@ const Accordion = ({ items, setActiveIndex, activeIndex }: AccordionProps) => {
   );
 };
 
-export default Accordion;
+export default CustomAccordion;

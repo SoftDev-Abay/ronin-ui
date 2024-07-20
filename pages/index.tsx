@@ -1,9 +1,10 @@
 import React from "react";
 import Wrapper from "@/app/pages/Wrapper/Wrapper";
-import LogosCarousel from "@/app/components/LogosCarousel/LogosCarousel";
+import PartnersSection from "@/app/pages/Hero/PartnersSection/PartnersSection";
 import ServicesSection from "@/app/pages/Hero/ServicesSection/ServicesSection";
 import TitleSection from "@/app/pages/Hero/TitleSection/TitleSection";
-
+import PortfolioSection from "@/app/pages/Hero/PortfolioSection/PortfolioSection";
+import FAQSection from "@/app/pages/Hero/FAQSection/FAQSection";
 export async function getServerSideProps({ locale }: { locale: string }) {
   try {
     return {
@@ -14,25 +15,15 @@ export async function getServerSideProps({ locale }: { locale: string }) {
   } catch (e) {}
 }
 
-const partnersImages = [
-  "/imgs/partners/armana-usupov.png",
-  "/imgs/partners/we-project.png",
-  "/imgs/partners/rg-gold.png",
-  "/imgs/partners/motiva.png",
-  "/imgs/partners/jv-team.png",
-  "/imgs/partners/jusan-bank.png",
-  "/imgs/partners/hr-capital.png",
-  "/imgs/partners/bi-group.png",
-  "/imgs/partners/astana-hub.png",
-];
-
 const About = () => {
   return (
     <>
       <Wrapper>
         <TitleSection />
-        <LogosCarousel logoSrcs={partnersImages} />
+        <PartnersSection />
         <ServicesSection />
+        <PortfolioSection />
+        <FAQSection />
       </Wrapper>
     </>
   );
