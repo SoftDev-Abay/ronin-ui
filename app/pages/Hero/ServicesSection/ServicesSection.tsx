@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CustomAccordion from "@/app/components/CustomAccordion/Accordion";
+import Accordion from "@/app/components/Accordion/Accordion";
 
 import "./style.scss";
 
@@ -50,7 +50,7 @@ const ServicesSection = () => {
   return (
     <>
       <div className="services-section">
-        <CustomAccordion
+        <Accordion
           items={accordionItems}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}

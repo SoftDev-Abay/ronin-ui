@@ -22,29 +22,37 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <div className="logo">
-          <Image src="/logo.svg" alt="Logo" priority width="153" height="34" />
-        </div>
+        <div className="navbar-container">
+          <div className="logo">
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              priority
+              width="153"
+              height="34"
+            />
+          </div>
 
-        <div className="links">
-          <a href="">Services</a>
-          <a href="">Work</a>
-          <a href="">About Us</a>
-          <a href="">Blog</a>
-          {/* <Button>
+          <div className="links">
+            <a href="">Services</a>
+            <a href="">Work</a>
+            <a href="">About Us</a>
+            <a href="">Blog</a>
+            {/* <Button>
             <span className="gradient-text">Let’s chat</span>
           </Button> */}
-          <Button>Let’s chat</Button>
-          <a href="">EN</a>
-        </div>
+            <Button>Let’s chat</Button>
+            <a href="">EN</a>
+          </div>
 
-        <div
-          className={`burger ${isShow ? "is-active" : ""}`}
-          onClick={() => setIsShow((prev) => !prev)}
-        >
-          <span className="burger-line"></span>
-          <span className="burger-line"></span>
-          <span className="burger-line"></span>
+          <div
+            className={`burger ${isShow ? "is-active" : ""}`}
+            onClick={() => setIsShow((prev) => !prev)}
+          >
+            <span className="burger-line"></span>
+            <span className="burger-line"></span>
+            <span className="burger-line"></span>
+          </div>
         </div>
       </div>
       <Modal isShow={isShow} handleClose={handleClose}>

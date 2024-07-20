@@ -1,0 +1,64 @@
+@use "../../../styles//colors.scss" as *;
+
+.special-accordion-wrapper {
+  .special-accordion-item {
+    padding: 36px 0 20px 0;
+    cursor: pointer;
+
+    border-bottom: 1px solid $color-gray;
+
+    .header {
+      display: flex;
+      gap: 28px;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        font-family: Articulat;
+        font-size: 36px;
+        font-weight: 400;
+        // line-height: 49.68px;
+        color: $color-black;
+        // margin: 0;
+      }
+      span {
+        .toggle-icon {
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+    .content {
+      max-height: 0px;
+
+      margin-top: 25px;
+      position: relative;
+
+      font-family: Articulat;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 36px;
+
+      color: $color-gray;
+      transition: all 0.7s ease;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    &.active {
+      .content {
+        max-height: 1000px;
+        opacity: 1;
+      }
+      .header {
+        span {
+          .toggle-icon {
+            // invert it when active
+            transform: rotateX(180deg);
+          }
+        }
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

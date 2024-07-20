@@ -1,38 +1,34 @@
 import React, { useState } from "react";
 import "./style.scss";
+import SpecialAccordion from "@/app/components/SpecialAccordion/SpecialAccordion";
 
 const accordionItems = [
   {
-    title: "Websites",
+    title: "How much do you charge for a design project?",
     content:
-      "Your company's identity is shaped by its online presence. We design websites that help you achieve your business goals.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi laboriosam cum minus ipsum facere corporis sit sunt nisi nobis veritatis quasi voluptas ipsam error quia, ullam, voluptates praesentium repellendus reprehenderit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi laboriosam cum minus ipsum facere corporis sit sunt nisi nobis veritatis quasi voluptas ipsam error quia, ullam, voluptates praesentium repellendus reprehenderit.",
   },
   {
-    title: "Branding",
+    title: "What sets Ronin apart from other design agencies?",
     content:
-      "A brand is more than a logo. We develop a unique identity and guidelines for consistent communication.",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, cupiditate! Corrupti vero numquam iusto ex fugiat quos saepe quidem, consequatur nobis nesciunt earum natus quod corporis praesentium libero repellendus nulla exercitationem veritatis quaerat unde harum ratione. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, cupiditate! Corrupti vero numquam iusto ex fugiat quos saepe quidem, consequatur nobis nesciunt earum natus quod corporis praesentium libero repellendus nulla exercitationem veritatis quaerat unde harum ratione.",
   },
   {
-    title: "Development",
+    title: "Are you open to working with startups?",
     content:
-      "Our developers handle all stages of app development, from UX/UI design to deployment, ensuring seamless user experiences.",
-  },
-  {
-    title: "Presentations",
-    content:
-      "Our primary focus in presentations covers pitch decks, corporate reports, and creating visually engaging infographics.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu",
   },
 
   {
-    title: "Content",
+    title: "Do you work with clients in different time zones?",
     content:
-      "Content is key to user attraction. We provide copywriting, illustration, 3D/2D graphics, iconography, animation.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quю Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu",
   },
 
   {
-    title: "Artificial Intelligence",
+    title: "Can you assist us in redesigning our B2B/enterprise software?",
     content:
-      "Ronin integrates AI to optimize processes and enhance digital products, pioneering AI-driven UX with novel interaction models in interface design.",
+      "Lorem quam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem quam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu",
   },
 ];
 
@@ -40,10 +36,15 @@ const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <div className="faq-section">
-      <h1 className="title gradient-text">FAQ</h1>
-
-      {/* <div className="accordion"></div> */}
+    <div className="faq-section-wrapper">
+      <div className="faq-section-container">
+        <h1 className="faq-section-title gradient-text">FAQ</h1>
+        <SpecialAccordion
+          items={accordionItems}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        />
+      </div>
     </div>
   );
 };

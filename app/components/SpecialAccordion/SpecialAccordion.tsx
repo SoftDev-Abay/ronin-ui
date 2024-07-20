@@ -4,62 +4,63 @@ import ChevroletUpIcon from "@/app/icons/ChevroletUpIcon";
 
 import "./style.scss";
 
-interface AccordionItem {
+interface SpecialAccordionItem {
   title: string;
   content: string;
 }
 
-interface AccordionItemProps {
-  data: AccordionItem;
+interface SpecialAccordionItemProps {
+  data: SpecialAccordionItem;
   isActive: boolean;
   index: number;
   setActiveIndex: (value) => void;
 }
 
-const AccordionItem = ({
+const SpecialAccordionItem = ({
   data: { title, content },
   isActive,
   setActiveIndex,
   index,
-}: AccordionItemProps) => {
+}: SpecialAccordionItemProps) => {
   return (
     <div
       onClick={() => {
         setActiveIndex(isActive ? null : index);
       }}
-      className={`accordion-item ${isActive ? "active" : ""}`}
+      className={`special-accordion-item ${isActive ? "active" : ""}`}
     >
       <div className="header">
-        <h1 className={`title ${isActive ? "gradient-text" : ""}`}>{title}</h1>
+        <h1 className={`title `}>{title}</h1>
         <span>
-          {isActive ? (
-            <ChevroletDownIcon width={26} height={26} color="#1261FC" />
-          ) : (
-            <ChevroletUpIcon width={26} height={26} color="#1C1F39" />
-          )}
+          <ChevroletUpIcon
+            className="toggle-icon"
+            width={26}
+            height={26}
+            color="#1C1F39"
+          />
         </span>
       </div>
 
-      {isActive && <div className="content">{content}</div>}
+      <div className="content">{content}</div>
     </div>
   );
 };
 
-interface AccordionProps {
+interface SpecialAccordionProps {
   activeIndex: number | null;
   setActiveIndex: (value) => void;
-  items: AccordionItem[];
+  items: SpecialAccordionItem[];
 }
 
-const CustomAccordion = ({
+const SpecialAccordion = ({
   items,
   setActiveIndex,
   activeIndex,
-}: AccordionProps) => {
+}: SpecialAccordionProps) => {
   return (
-    <div className="accordion-wrapper">
+    <div className="special-accordion-wrapper">
       {items.map((item, index) => (
-        <AccordionItem
+        <SpecialAccordionItem
           key={index}
           data={{
             title: item.title,
@@ -74,4 +75,4 @@ const CustomAccordion = ({
   );
 };
 
-export default CustomAccordion;
+export default SpecialAccordion;

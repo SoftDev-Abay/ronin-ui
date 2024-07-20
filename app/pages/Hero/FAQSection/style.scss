@@ -1,11 +1,16 @@
-.faq-section {
+.faq-section-wrapper {
   padding: 0 36px;
-
-  .title {
-    font-family: Articulat;
-    font-size: 84px;
-    font-weight: 600;
-    line-height: 115.92px;
-    margin-bottom: 32.5px;
+  .faq-section-container {
+    // max-width: 1352px;
+    max-width: 1552px;
+    margin-left: auto;
+    margin-right: auto;
+    .faq-section-title {
+      font-family: Articulat;
+      font-size: 84px;
+      font-weight: 600;
+      line-height: 115.92px;
+      margin-bottom: 32.5px;
+    }
   }
 }
