@@ -5,6 +5,7 @@ import ServicesSection from "@/app/pages/Hero/ServicesSection/ServicesSection";
 import TitleSection from "@/app/pages/Hero/TitleSection/TitleSection";
 import PortfolioSection from "@/app/pages/Hero/PortfolioSection/PortfolioSection";
 import FAQSection from "@/app/pages/Hero/FAQSection/FAQSection";
+import AboutSection from "@/app/pages/Hero/AboutSection/AboutSection";
 export async function getServerSideProps({ locale }: { locale: string }) {
   try {
     return {
@@ -23,6 +24,7 @@ const About = () => {
         <PartnersSection />
         <ServicesSection />
         <PortfolioSection />
+        <AboutSection />
         <FAQSection />
       </Wrapper>
     </>
