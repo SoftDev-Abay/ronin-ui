@@ -35,7 +35,7 @@ const AccordionItem = ({
           {isActive ? (
             <ChevroletDownIcon width={26} height={26} color="#1261FC" />
           ) : (
-            <ChevroletUpIcon width={26} height={26} color="#1C1F39" />
+            <ChevroletUpIcon width={26} height={26} color="#9ba1ae" />
           )}
         </span>
       </div>
