@@ -21,10 +21,10 @@ const TitleSection = () => {
             brands.
           </p>
           <div className="button-wrapper">
-            <button>
+            <Button className="hightlighted-btn">
               <span>See our services</span>
               <ArrowRightIcon width={45} height={45} color="#F3FBFF" />
-            </button>
+            </Button>
           </div>
         </div>
       </section>

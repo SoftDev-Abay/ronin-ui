@@ -5,6 +5,9 @@ import Button from "@/app/components/Button/Button";
 import ArrowOutwardIcon from "@/app/icons/ArrowOutwardIcon";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
+import InstagramIcon from "@/app/icons/InstagramIcon";
+import TwitterIcon from "@/app/icons/TwitterIcon";
+import BehanceIcon from "@/app/icons/BehanceIcon";
 
 const RootModalContent = () => {
   const router = useRouter();
@@ -15,27 +18,27 @@ const RootModalContent = () => {
 
   return (
     <div className="root-modal-content">
-      <nav>
-        <Link href="/" className={isActive("/") ? "active" : ""}>
-          <span>{t("wrapper.root_modal.nav.about")}</span>
-        </Link>
-        <Link href="/goal" className={isActive("/goal") ? "active" : ""}>
-          <span>{t("wrapper.root_modal.nav.goal")}</span>
-        </Link>
-        <Link href="/news" className={isActive("/news") ? "active" : ""}>
-          <span>{t("wrapper.root_modal.nav.whats_new")}</span>
-        </Link>
-      </nav>
-      <div className="root-modal-content__btn__wrapper">
-        <Link href={"/contact-us"}>
-          <Button
-            className="btn-content"
-            onClick={() => console.log("Button clicked")}
-          >
-            <span>{t("wrapper.root_modal.button_contact_us")}</span>
-            <ArrowOutwardIcon />
-          </Button>
-        </Link>
+      <div className="info">
+        <div className="language-toggle">EN</div>
+        <div className="navigation">
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div className="contact-us-info">
+          <p className="subtext">Свяжитесь с нами</p>
+          <div className="email">
+            <a href="">hi@ronindsgn.com</a>
+          </div>
+        </div>
+        <div className="social">
+          <InstagramIcon width={35} height={35} />
+          <TwitterIcon width={35} height={35} />
+          <BehanceIcon width={35} height={35} />
+        </div>
+        <p className="copyright">(с) 2024 ИП «Амангали»</p>
       </div>
     </div>
   );

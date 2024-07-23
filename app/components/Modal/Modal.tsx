@@ -4,7 +4,7 @@ import { createPortal } from "react-dom";
 import styles from "./styles.module.scss";
 
 import CloseIcon from "@/app/icons/CloseIcon";
-import Backdrop from "./Backdrop";
+import Backdrop from "../Backdrop/Backdrop";
 import FacebookIcon from "@/app/icons/FacebookIcon";
 import InstagramIcon from "@/app/icons/InstagramIcon";
 import YoutubeIcon from "@/app/icons/YoutubeIcon";
@@ -27,57 +27,54 @@ const Modal: React.FC<Props> = ({
   const [isRenderedOnServerSide, setIsRenderedOnServerSide] =
     useState<boolean>(false);
   useEffect(() => {
-    setIsRenderedOnServerSide(true);
-  }, []);
+    if (isShow) {
+      setIsRenderedOnServerSide(true);
+    }
+  }, [isShow]);
 
-  if (!isRenderedOnServerSide) return null;
+  const closeModal = () => {
+    setIsRenderedOnServerSide(false);
+    setTimeout(() => {
+      handleClose();
+    }, 300);
+  };
+
+  if (!isShow) return null;
+
   return createPortal(
-    <>
-      {isShow ? (
-        <div className={classNames(styles.modal, { "d-none": !isShow })}>
-          <div
-            style={maxWidth ? { maxWidth: maxWidth, width: "100%" } : {}}
-            className={styles.modalContainer}
-          >
-            <div>
-              <div className={styles.modalTop}>
-                <div
-                  style={
-                    display ? { display: display } : { display: "inline-block" }
-                  }
-                  className={styles.modalControls}
-                  onClick={() => handleClose()}
-                >
-                  <CloseIcon />
-                </div>
-              </div>
-              <div className={styles.modalMain}>{children}</div>
-            </div>
+    <div
+      className={`${styles.modal} ${
+        isRenderedOnServerSide ? styles.active : ""
+      }`}
+    >
+      <div
+        style={maxWidth ? { maxWidth: maxWidth, width: "100%" } : {}}
+        className={styles.modalContainer}
+      >
+        <div>
+          <div className={styles.modalTop}>
+            <img
+              src="/logo-short-white.svg"
+              width={34}
+              height={28.21}
+              alt="logo"
+            />
 
-            <div className={styles.modalBottom}>
-              <div className={styles.modalBottomLinksContainer}>
-                <a href="https://www.facebook.com/" target="_blank">
-                  <FacebookIcon width={24} height={24} />
-                </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                  <InstagramIcon width={24} height={24} />
-                </a>
-                <a href="https://www.youtube.com/" target="_blank">
-                  <YoutubeIcon width={24} height={24} />
-                </a>
-              </div>
-
-              <p className={styles.modalBottomCopyright}>
-                © Eurasia Group 2022
-              </p>
+            <div
+              style={
+                display ? { display: display } : { display: "inline-block" }
+              }
+              className={styles.modalControls}
+              onClick={() => closeModal()}
+            >
+              <CloseIcon color="white" width={28} height={28} />
             </div>
           </div>
-          <Backdrop onClick={handleClose} transparent={true} />
+          <div className={styles.modalMain}>{children}</div>
         </div>
-      ) : (
-        <></>
-      )}
-    </>,
+      </div>
+      <Backdrop onClick={handleClose} transparent={true} />
+    </div>,
     document.getElementById("modal-root")!!
   );
 };

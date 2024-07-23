@@ -99,28 +99,24 @@
         }
       }
       .button-wrapper {
-        button {
-          display: flex;
-          align-items: center;
-          gap: 20px;
-          padding: 16px 44px 12px 44px;
-          border-radius: 52px;
-          background: $gradient-color-primary;
-          box-shadow: -10px 8px 19.1px 0px #04289f29;
-
-          color: $color-white;
-          font-family: Articulat;
-          font-size: 36px;
-          font-weight: 700;
-          line-height: 49.68px;
-          animation: float 5s ease-in-out infinite;
-        }
         @media (max-width: 1024px) {
           position: absolute;
           bottom: 100px;
           width: 100%;
           display: flex;
           justify-content: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 40px;
+          line-height: 44px;
+          margin-bottom: 16px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 24px;
         }
       }
     }

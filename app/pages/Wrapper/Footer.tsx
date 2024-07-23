@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.scss";
-import FacebookIcon from "@/app/icons/FacebookIcon";
 import InstagramIcon from "@/app/icons/InstagramIcon";
-import YoutubeIcon from "@/app/icons/YoutubeIcon";
+import TwitterIcon from "@/app/icons/TwitterIcon";
+import BehanceIcon from "@/app/icons/BehanceIcon";
+
 const Footer = () => {
   return (
     <div className="footer">
@@ -17,9 +18,9 @@ const Footer = () => {
               <a href="#contact">Contact</a>
             </div>
             <div className="social">
-              <i>IN</i>
-              <i>IN</i>
-              <i>IN</i>
+              <InstagramIcon width={35} height={35}/>
+              <TwitterIcon width={35} height={35}/>
+              <BehanceIcon width={35} height={35}/>
             </div>
             <p className="email">hi@ronindsgn.com</p>
           </div>

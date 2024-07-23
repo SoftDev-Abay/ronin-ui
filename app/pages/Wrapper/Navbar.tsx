@@ -3,7 +3,7 @@ import "./style.scss";
 import Image from "next/image";
 import MenuIcon from "../../icons/MenuIcon";
 import Button from "@/app/components/Button/Button";
-import Modal from "@/app/components/Modal/Modal";
+import SideModal from "@/app/components/Modals/SideModal/SideModal";
 import RootModalContent from "./RootModalContent";
 import { useTranslations } from "next-intl";
 const Navbar = () => {
@@ -24,12 +24,19 @@ const Navbar = () => {
       <div className="navbar">
         <div className="navbar-container">
           <div className="logo">
-            <Image
+            <img
+              className="logo-full"
               src="/logo.svg"
               alt="Logo"
-              priority
               width="153"
               height="34"
+            />
+            <img
+              className="logo-short"
+              src="/logo-short-blue.svg"
+              alt="Logo"
+              width={34}
+              height={28.21}
             />
           </div>
 
@@ -45,19 +52,25 @@ const Navbar = () => {
             <a href="">EN</a>
           </div>
 
-          <div
+          {/* <div
             className={`burger ${isShow ? "is-active" : ""}`}
             onClick={() => setIsShow((prev) => !prev)}
           >
             <span className="burger-line"></span>
             <span className="burger-line"></span>
             <span className="burger-line"></span>
+          </div> */}
+          <div
+            className="menu-icon-wrapper"
+            onClick={() => setIsShow((prev) => !prev)}
+          >
+            <MenuIcon width={28} height={28} />
           </div>
         </div>
       </div>
-      <Modal isShow={isShow} handleClose={handleClose}>
+      <SideModal isShow={isShow} handleClose={handleClose}>
         <RootModalContent />
-      </Modal>
+      </SideModal>
     </>
   );
 };

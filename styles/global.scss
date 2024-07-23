@@ -53,4 +53,15 @@ body {
   line-height: 49.68px !important;
   animation: float 5s ease-in-out infinite;
   border: none !important;
+
+  @media (max-width: 768px) {
+    font-size: 20px !important;
+    line-height: 27.6px !important;
+    padding: 8px 24px !important;
+
+    svg {
+      width: 22px;
+      height: 26px;
+    }
+  }
 }

@@ -72,7 +72,7 @@
 }
 
 @media (max-width: 1268px) {
-  .accorodion-wrapper {
+  .accordion-wrapper {
     gap: 30px;
     .accordion-item {
       padding: 0px 25px !important;
@@ -85,7 +85,7 @@
 }
 
 @media (max-width: 1115px) {
-  .accorodion-wrapper {
+  .accordion-wrapper {
     gap: 44px;
     .accordion-item {
       .header {
@@ -100,15 +100,23 @@
     }
   }
 }
-@media (max-width: 500px) {
-  .accorodion-wrapper {
-    gap: 44px;
+@media (max-width: 768px) {
+  .accordion-wrapper {
+    gap: 24px;
     .accordion-item {
       padding: 0px 20px !important;
 
       .header {
-        gap: 0 !important;
-        justify-content: space-between;
+        .title {
+          font-size: 20px;
+          line-height: 27.6px;
+        }
+        gap: 12px;
+        justify-content: start;
+      }
+      .content {
+        font-size: 16px;
+        line-height: 24px;
       }
 
       &.active {
@@ -117,3 +125,19 @@
     }
   }
 }
+// @media (max-width: 500px) {
+//   .accordion-wrapper {
+//     gap: 44px;
+//     .accordion-item {
+//       padding: 0px 20px !important;
+
+//       .header {
+//         gap: 0 !important;
+//       }
+
+//       &.active {
+//         padding: 38px 20px !important;
+//       }
+//     }
+//   }
+// }
