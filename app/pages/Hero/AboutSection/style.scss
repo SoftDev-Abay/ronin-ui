@@ -5,16 +5,47 @@
   margin-top: 100px;
   margin-bottom: 100px;
 
-  display: flex;
-  flex-direction: column;
-  gap: 150px;
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+
+    margin-bottom: 120px;
+  }
+
+  .bottom-text-wrapper {
+    display: flex;
+    justify-content: end;
+    .bottom-text {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      span {
+        font-family: Articulat CF;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 33.12px;
+        color: $color-dark;
+      }
+    }
+  }
 
   .experience {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     column-gap: 50px;
     row-gap: 50px;
+  }
+
+  .experience-1 {
+    .banner-description-wrapper {
+      justify-content: end;
+    }
+  }
+  .experience-2 {
+    .banner-description-wrapper {
+      justify-content: start;
+    }
   }
 
   .banner-number {
@@ -24,12 +55,13 @@
 
     color: $color-dark-blue;
   }
+
   .banner-description-wrapper {
     flex: 1;
     display: flex;
+
     // overflow: hidden;
 
-    // justify-content: end;
     .banner-description-content {
       //   width: 569.19px;
       //   width: 100%;
@@ -89,34 +121,58 @@
   }
 }
 
-@media (max-width: 1268px) {
+@media (max-width: 1536px) {
   .about-section {
+    .main {
+      gap: 100px;
+    }
     .experience {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .experience-2 {
+      flex-direction: column-reverse;
+
+      row-gap: 40px;
+
+      .banner-description-wrapper {
+        // justify-content: end;
+      }
     }
 
     .banner-number {
-      font-size: 200px;
+      font-size: 300px;
     }
 
     .banner-description-wrapper {
       .banner-description-content {
         img {
+          height: 80.12px;
         }
 
         .flag-img {
+          height: 48.28px;
+          width: 91px;
         }
 
         span {
           font-size: 64px;
-          line-height: 88px;
+          line-height: 88.32px;
         }
       }
     }
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1268px) {
   .about-section {
+    .main {
+      gap: 80px;
+    }
+
     .experience {
+      row-gap: 30px;
     }
 
     .banner-number {
@@ -126,29 +182,34 @@
     .banner-description-wrapper {
       .banner-description-content {
         img {
-          height: 54.31px;
+          height: 70.12px;
         }
 
         .flag-img {
-          height: 32.94px;
-          width: 61px;
+          height: 42.28px;
+          width: 81px;
         }
 
         span {
-          font-size: 28.96px;
-          line-height: 39.97px;
+          font-size: 36px;
+          line-height: 49.68px;
         }
       }
     }
   }
 }
+
 @media (max-width: 768px) {
   .about-section {
+    .main {
+      gap: 52px;
+    }
     .experience {
+      row-gap: 0px;
     }
 
     .banner-number {
-      font-size: 150px;
+      font-size: 170px;
     }
 
     .banner-description-wrapper {
