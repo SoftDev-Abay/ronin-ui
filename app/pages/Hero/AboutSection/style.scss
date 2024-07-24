@@ -201,6 +201,7 @@
 
 @media (max-width: 768px) {
   .about-section {
+    padding: 0 32px;
     .main {
       gap: 52px;
     }
@@ -209,7 +210,7 @@
     }
 
     .banner-number {
-      font-size: 170px;
+      font-size: 160px;
     }
 
     .banner-description-wrapper {
