@@ -36,7 +36,7 @@ const SpecialAccordionItem = ({
             className="toggle-icon"
             width={26}
             height={26}
-            color="#1C1F39"
+            color="#9ba1ae"
           />
         </span>
       </div>
