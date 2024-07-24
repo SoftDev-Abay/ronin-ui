@@ -49,7 +49,7 @@ const ServicesSection = () => {
 
   return (
     <>
-      <div className="services-section">
+      <div className="padding-wrapper services-section">
         <Accordion
           items={accordionItems}
           activeIndex={activeIndex}

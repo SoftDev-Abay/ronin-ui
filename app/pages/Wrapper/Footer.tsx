@@ -7,7 +7,7 @@ import BehanceIcon from "@/app/icons/BehanceIcon";
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="footer-container">
+      <div className="padding-wrapper footer-container">
         <div className="main">
           <div className="info">
             <div className="navigation">
@@ -18,9 +18,9 @@ const Footer = () => {
               <a href="#contact">Contact</a>
             </div>
             <div className="social">
-              <InstagramIcon width={35} height={35}/>
-              <TwitterIcon width={35} height={35}/>
-              <BehanceIcon width={35} height={35}/>
+              <InstagramIcon width={35} height={35} />
+              <TwitterIcon width={35} height={35} />
+              <BehanceIcon width={35} height={35} />
             </div>
             <p className="email">hi@ronindsgn.com</p>
           </div>

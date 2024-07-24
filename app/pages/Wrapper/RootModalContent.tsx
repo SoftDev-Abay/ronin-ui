@@ -17,7 +17,7 @@ const RootModalContent = () => {
   const t = useTranslations();
 
   return (
-    <div className="root-modal-content">
+    <div className="padding-wrapper root-modal-content">
       <div className="info">
         <div className="language-toggle">EN</div>
         <div className="navigation">

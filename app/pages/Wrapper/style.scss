@@ -40,7 +40,8 @@
       margin-left: auto;
       margin-right: auto;
       .navbar-container {
-        padding: 24px 36px;
+        padding-top: 24px;
+        padding-bottom: 24px;
         width: 100%;
         background-color: $color-secondary;
         display: flex;
@@ -54,7 +55,7 @@
             display: none;
           }
 
-          @media (max-width: 1024px) {
+          @media (max-width: 1104px) {
             .logo-full {
               display: none;
             }
@@ -64,9 +65,9 @@
           }
         }
 
-        .menu-icon-wrapper {
+        .menu-icon {
           display: none;
-          @media (max-width: 1024px) {
+          @media (max-width: 1104px) {
             display: block;
           }
         }
@@ -149,14 +150,9 @@
           }
 
           // 1024px at this it should be hidden
-          @media (max-width: 1024px) {
+          @media (max-width: 1104px) {
             display: none;
           }
-        }
-
-        @media (max-width: 1124px) {
-          padding-left: 36px;
-          padding-right: 36px;
         }
 
         @media (max-width: 576px) {
@@ -180,17 +176,13 @@
         flex-direction: column;
         row-gap: 34px;
 
-        padding: 80px 36px 53px 36px;
+        padding-top: 80px;
+        padding-bottom: 53px;
 
         color: $color-white;
 
         @media (max-width: 768px) {
-          padding: 32px 40px;
-        }
-
-        @media (max-width: 360px) {
-          // flex-direction: column-reverse;
-          // gap: 12px;
+          padding-top: 40px;
         }
 
         .main {
@@ -244,6 +236,7 @@
         .copyright {
           display: flex;
           justify-content: space-between;
+          gap: 24px;
           // padding-right: 386px;
           width: 100%;
 

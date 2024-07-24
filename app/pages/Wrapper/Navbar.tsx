@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <div className="navbar-container">
+        <div className="padding-wrapper navbar-container">
           <div className="logo">
             <img
               className="logo-full"
@@ -45,9 +45,7 @@ const Navbar = () => {
             <a href="">Work</a>
             <a href="">About Us</a>
             <a href="">Blog</a>
-            {/* <Button>
-            <span className="gradient-text">Let’s chat</span>
-          </Button> */}
+
             <Button>Let’s chat</Button>
             <a href="">EN</a>
           </div>
@@ -60,12 +58,19 @@ const Navbar = () => {
             <span className="burger-line"></span>
             <span className="burger-line"></span>
           </div> */}
-          <div
+          {/* <div
             className="menu-icon-wrapper"
             onClick={() => setIsShow((prev) => !prev)}
           >
             <MenuIcon width={28} height={28} />
-          </div>
+          </div> */}
+
+          <MenuIcon
+            onClick={() => setIsShow((prev) => !prev)}
+            className="menu-icon"
+            width={28}
+            height={28}
+          />
         </div>
       </div>
       <SideModal isShow={isShow} handleClose={handleClose}>

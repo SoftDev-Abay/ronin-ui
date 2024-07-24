@@ -203,7 +203,7 @@ const PortfolioSection = () => {
   const isMobile = width < 768;
 
   return (
-    <div className="portfolio-section">
+    <div className="padding-wrapper portfolio-section">
       <h1 className="title gradient-text">Our portfolio</h1>
 
       {isMobile ? (

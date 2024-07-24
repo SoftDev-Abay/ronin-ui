@@ -64,3 +64,49 @@ body {
     }
   }
 }
+
+.padding-wrapper {
+  padding-left: 144px;
+  padding-right: 144px;
+
+  @media (max-width: 1536px) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  @media (max-width: 1280px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (max-width: 1024px) {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}

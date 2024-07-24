@@ -4,7 +4,7 @@ import "./style.scss";
 import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
 const TitleSection = () => {
   return (
-    <div className="title-section">
+    <div className="title-section padding-wrapper">
       <section className="banner">
         <img
           className="banner-image"

@@ -5,7 +5,7 @@ import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
 
 const AboutSection = () => {
   return (
-    <div className="about-section">
+    <div className="about-section padding-wrapper">
       <div className="main">
         <div className="experience experience-1">
           <div className="banner-number">40+</div>

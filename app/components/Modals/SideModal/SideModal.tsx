@@ -52,7 +52,7 @@ const SideModal: React.FC<Props> = ({
         className={styles.modalContainer}
       >
         <div>
-          <div className={styles.modalTop}>
+          <div className={classNames(styles.modalTop, "padding-wrapper")}>
             <img
               src="/logo-short-white.svg"
               width={34}
@@ -62,7 +62,7 @@ const SideModal: React.FC<Props> = ({
 
             <div
               style={
-                display ? { display: display } : { display: "inline-block" }
+                display ? { display: display } : { display: "flex" }
               }
               className={styles.modalControls}
               onClick={() => closeModal()}

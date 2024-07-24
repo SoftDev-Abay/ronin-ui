@@ -1,9 +1,8 @@
 @use "../../../../styles/colors.scss" as *;
 
 .about-section {
-  padding: 0 36px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  padding-top: 203px;
+  padding-bottom: 149px;
 
   .main {
     display: flex;
@@ -211,18 +210,63 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .about-section {
+    .main {
+      gap: 60px;
+    }
+    .experience {
+      row-gap: 20px;
+    }
+
+    .banner-number {
+      font-size: 180px;
+    }
+
+    .banner-description-wrapper {
+      .banner-description-content {
+        img {
+          height: 60.12px;
+        }
+
+        .flag-img {
+          height: 36.28px;
+          width: 71px;
+        }
+
+        span {
+          font-size: 32px;
+          line-height: 44.32px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .about-section {
-    padding: 0 32px;
+    padding-top: 51px;
+    padding-bottom: 52px;
+
+    .bottom-text-wrapper {
+      .bottom-text {
+        gap: 8px;
+        span {
+          font-size: 16px;
+          line-height: 22.08px;
+        }
+      }
+    }
     .main {
       gap: 52px;
+      margin-bottom: 52px;
     }
     .experience {
       row-gap: 0px;
     }
 
     .banner-number {
-      font-size: 160px;
+      font-size: 150px;
     }
 
     .banner-description-wrapper {
@@ -241,6 +285,17 @@
           line-height: 39.97px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .about-section {
+    .bottom-text-wrapper {
+      justify-content: start;
+    }
+    .banner-number {
+      font-size: 120px;
     }
   }
 }

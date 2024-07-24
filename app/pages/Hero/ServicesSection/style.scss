@@ -1,7 +1,8 @@
 @use "../../../../styles/colors.scss" as *;
 
 .services-section {
-  padding: 104px 36px 124px 36px;
+  padding-top: 104px;
+  padding-bottom: 124px;
 
   // display: flex;
   // justify-content: space-between;
@@ -16,6 +17,8 @@
   justify-content: space-between;
 
   min-height: 828px;
+
+  // TODO: update the width of media queries for new padding
 
   @media (max-width: 1268px) {
     grid-template-columns: 520px auto;
@@ -99,11 +102,3 @@
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
