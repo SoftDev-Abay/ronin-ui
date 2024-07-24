@@ -1,5 +1,4 @@
 @use "./colors.scss" as *;
-@import "fonts.scss";
 
 * {
   margin: 0;
@@ -10,6 +9,7 @@
 body {
   background-color: #f0f0f0;
   color: rgba(51, 51, 51, 1);
+  font-family: "articulat-cf", sans-serif;
 }
 
 .highlighted {
@@ -47,7 +47,6 @@ body {
   box-shadow: -10px 8px 19.1px 0px #04289f29 !important;
 
   color: $color-white !important;
-  font-family: Articulat;
   font-size: 36px !important;
   font-weight: 700 !important;
   line-height: 49.68px !important;

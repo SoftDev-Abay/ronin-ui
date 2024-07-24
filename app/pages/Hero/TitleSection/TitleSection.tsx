@@ -14,7 +14,7 @@ const TitleSection = () => {
         <div className="banner-inner">
           <h1>
             Ronin is a <span className="gradient-text">global</span> branding
-            and UX UI agency
+            and UX/UI agency
           </h1>
           <p>
             We create effective websites, stunning pitch decks and unique

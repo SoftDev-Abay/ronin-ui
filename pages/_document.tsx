@@ -14,7 +14,8 @@ export default function Document(props: DocumentProps & DocumentHeadTagsProps) {
   return (
     <Html lang="en">
       <Head>
-        <DocumentHeadTags {...props} />{" "}
+        <DocumentHeadTags {...props} />
+        <link rel="stylesheet" href="https://use.typekit.net/urj0jhb.css" />
       </Head>
       <body>
         <Main />

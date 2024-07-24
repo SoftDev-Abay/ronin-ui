@@ -21,7 +21,6 @@
       gap: 12px;
       align-items: center;
       span {
-        font-family: Articulat CF;
         font-size: 24px;
         font-weight: 400;
         line-height: 33.12px;
@@ -49,7 +48,6 @@
   }
 
   .banner-number {
-    // font-family: Articulat;
     font-size: 400px;
     font-weight: 400;
 
@@ -100,7 +98,6 @@
       }
 
       span {
-        // font-family: Articulat;
         font-size: 84px;
         font-weight: 400;
         line-height: 115.92px;
@@ -123,6 +120,21 @@
 
 @media (max-width: 1536px) {
   .about-section {
+    .bottom-text-wrapper {
+      display: flex;
+      justify-content: end;
+      .bottom-text {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        span {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 33.12px;
+          color: $color-dark;
+        }
+      }
+    }
     .main {
       gap: 100px;
     }
