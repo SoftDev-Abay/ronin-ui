@@ -53,6 +53,13 @@ body {
   animation: float 5s ease-in-out infinite;
   border: none !important;
 
+
+  // hover stop animation, but not abrouptly but smoothly
+
+  &:hover {
+    animation-play-state: paused ;
+  }
+
   @media (max-width: 768px) {
     font-size: 20px !important;
     line-height: 27.6px !important;

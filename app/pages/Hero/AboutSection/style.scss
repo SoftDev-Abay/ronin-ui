@@ -25,6 +25,11 @@
         line-height: 33.12px;
         color: $color-dark;
       }
+
+      svg {
+        animation: leftToRight 3s infinite ease-in-out;
+        padding-bottom: 5px;
+      }
     }
   }
 
@@ -255,6 +260,10 @@
           font-size: 16px;
           line-height: 22.08px;
         }
+
+        svg {
+          padding-bottom: 3px;
+        }
       }
     }
     .main {
@@ -297,5 +306,17 @@
     .banner-number {
       font-size: 120px;
     }
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
   }
 }
