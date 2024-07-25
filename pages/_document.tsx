@@ -16,6 +16,8 @@ export default function Document(props: DocumentProps & DocumentHeadTagsProps) {
       <Head>
         <DocumentHeadTags {...props} />
         <link rel="stylesheet" href="https://use.typekit.net/urj0jhb.css" />
+        <link rel="icon" href="/logo-short-blue.svg" sizes="any" />
+        <title>Ronin UI</title>
       </Head>
       <body>
         <Main />

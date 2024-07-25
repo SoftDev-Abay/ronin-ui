@@ -10,6 +10,8 @@ const TitleSection = () => {
           className="banner-image"
           src="/imgs/samurai.png"
           alt="Illustration"
+          // width="100%"
+          height="auto"
         />
         <div className="banner-inner">
           <h1>
