@@ -58,6 +58,12 @@
       transform: translateY(-50%);
       cursor: pointer;
     }
+
+    .custom-swiper-button.disabled {
+      opacity: 0.4;
+      pointer-events: none; /* Optional: disable clicking */
+    }
+
     .custom-swiper-button-prev {
       left: 0px;
     }
