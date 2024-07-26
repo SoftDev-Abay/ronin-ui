@@ -5,6 +5,8 @@ import "./style.scss";
 import "swiper/css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
 import ProjectModalContent from "./ProjectModalContent/ProjectModalContent";
 import CenterModal from "@/app/components/Modals/CenterModal/CenterModal";
 interface Project {
@@ -35,7 +37,15 @@ const ProjectsMobile = ({ projects }: ProjectsProps) => {
 
   return (
     <div className="projects-mobile">
-      <Swiper spaceBetween={20} className="mySwiper">
+      <Swiper
+        spaceBetween={20}
+        className="mySwiper"
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: true,
+        }}
+        modules={[Autoplay]}
+      >
         {projects.map((project, index) => (
           <SwiperSlide>
             <ProjectCard
