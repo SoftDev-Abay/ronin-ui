@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Accordion from "@/app/components/Accordion/Accordion";
 
 import "./style.scss";
@@ -46,6 +46,19 @@ const accordionItems = [
 
 const ServicesSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  // Preloading images
+  useEffect(() => {
+    const preloadImages = () => {
+      accordionItems.forEach(item => {
+        const img = new Image();
+        img.src = item.img;
+      });
+    };
+
+    preloadImages();
+  }, []);
+
 
   return (
     <>
