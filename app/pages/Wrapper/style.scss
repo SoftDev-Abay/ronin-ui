@@ -15,7 +15,7 @@
     margin: 0 auto;
     min-height: 100vh;
     background-color: $color-secondary;
-    overflow: hidden;
+    // overflow: hidden;  TODO: check if this is needed, maybe it was used to hide the animation overflow
 
     .layout-content {
       max-width: 1920px;
