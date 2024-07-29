@@ -141,6 +141,14 @@
           align-items: center;
           gap: 60px;
 
+          .language-toggle {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 27.6px;
+            text-decoration: none;
+            color: $color-black;
+          }
+
           a {
             font-size: 20px;
             font-weight: 400;

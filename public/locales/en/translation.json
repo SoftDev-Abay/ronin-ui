@@ -1,84 +1,260 @@
 {
   "wrapper": {
+    "navigation": [
+      {
+        "title": "Services",
+        "link": "#services"
+      },
+      {
+        "title": "Work",
+        "link": "#work"
+      },
+      {
+        "title": "About us",
+        "link": "#about"
+      },
+      {
+        "title": "Blog",
+        "link": "#blog"
+      }
+    ],
     "navbar": {
-      "go_back_button": "Go home"
+      "action_button": "Let’s chat"
     },
     "footer": {
-      "copyright": "© Eurasia Group 2022"
+      "email": "hi@ronindsgn.com",
+      "copyright": "(с) 2024 Individual Entrepreneur 'Amangali'",
+      "rights": "All rights reserved"
     },
     "root_modal": {
-      "nav": {
-        "about": "About us",
-        "goal": "Goal",
-        "whats_new": "What's new"
+      "contact": {
+        "subtext": "Свяжитесь с нами",
+        "email": "hi@ronindsgn.com"
       },
-      "button_contact_us": "Contact us",
-      "copyright": "© Eurasia Group 2022"
-    }
-  },
-  "components": {
-    "sections": {
-      "hero": {
-        "contact_button": "Contact us"
-      },
-      "points": {
-        "title": {
-          "first": "We're in",
-          "second": "digits"
-        }
-      }
+      "copyright": "(с) 2024 ИП «Амангали»"
     }
   },
   "pages": {
-    "about": {
-      "solutions": {
-        "header": {
-          "title": "UNIQUE SOLUTIONS",
-          "description": "Over these years, we have created a developed network to provide farmers with unique integrated solutions in agriculture in Kazakhstan and Kyrgyzstan"
-        }
-      }
-    },
-    "news": {
-      "header": {
-        "title": "What's new",
-        "description": "Welcome to our News page! Stay updated with the latest news and announcements from our company. Check back often for updates on our projects, product launches, and industry insights. Stay tuned and never miss an update!"
-      },
-      "filters": {
-        "partners": "Partners news",
-        "agriculture": "News in agriculture"
-      }
-    },
-    "contact_us": {
-      "contact_form": {
-        "confidentiality": {
-          "agree": "I agree",
-          "highlighted": "with privacy policy"
+    "hero": {
+      "sections": {
+        "title_section": {
+          "heading": "Ronin is a global branding and UX/UI agency",
+          "subheading": "We create effective websites, stunning pitch decks and unique brands.",
+          "action_button": "See our services"
         },
-        "button_submit": "Submit",
-        "errors": {
-          "required": "This field is required",
-          "email": "Invalid email, please use the following format: john.smith@example.com",
-          "phone": "Phone number is not valid. Please use the following format: +7 (123) 456-78-90",
-          "minField2": "Must be at least 2 characters long",
-          "minField5": "Must be at least 5 characters long",
-          "maxField50": "Must be at most 50 characters long",
-          "agree": "You must agree to the privacy policy"
+        "services": {
+          "accordion": [
+            {
+              "title": "Websites",
+              "content": "Your company's identity is shaped by its online presence. We design websites that help you achieve your business goals.",
+              "img": "/imgs/services/Websites.png"
+            },
+            {
+              "title": "Branding",
+              "content": "A brand is more than a logo. We develop a unique identity and guidelines for consistent communication.",
+              "img": "/imgs/services/Branding.png"
+            },
+            {
+              "title": "Development",
+              "content": "Our developers handle all stages of app development, from UX/UI design to deployment, ensuring seamless user experiences.",
+              "img": "/imgs/services/Development.png"
+            },
+            {
+              "title": "Presentations",
+              "content": "Our primary focus in presentations covers pitch decks, corporate reports, and creating visually engaging infographics.",
+              "img": "/imgs/services/Presentations.png"
+            },
+
+            {
+              "title": "Content",
+              "content": "Content is key to user attraction. We provide copywriting, illustration, 3D/2D graphics, iconography, animation.",
+              "img": "/imgs/services/Content.png"
+            },
+
+            {
+              "title": "Artificial Intelligence",
+              "content": "Ronin integrates AI to optimize processes and enhance digital products, pioneering AI-driven UX with novel interaction models in interface design.",
+              "img": "/imgs/services/Artificial-Intelligence.png"
+            }
+          ]
         },
-        "inputs": {
-          "name": {
-            "placeholder": "Name",
-            "label": "Name"
-          },
-          "email": {
-            "placeholder": "Email",
-            "label": "Email"
-          },
-          "phone": {
-            "placeholder": "Phone",
-            "label": "Phone"
+        "work": {
+          "header": "Our portfolio",
+          "action_button": "See more",
+          "projects": {
+            "mobile": [
+              [
+                {
+                  "title": "Dunes",
+                  "description": "Website and digital branding for an innovative crypto-platform",
+                  "imgsURL": [
+                    "/imgs/projects/mobile/dunes-mobile-1.png",
+                    "/imgs/projects/mobile/dunes-mobile-2.png",
+                    "/imgs/projects/mobile/dunes-mobile-3.png",
+                    "/imgs/projects/mobile/dunes-mobile-4.png",
+                    "/imgs/projects/mobile/dunes-mobile-5.png"
+                  ],
+                  "categories": ["WEB-3", "UX/UI", "Web app"]
+                },
+                {
+                  "title": "Motiva",
+                  "description": "Redesigning website for a global leading implant manufacturer",
+                  "imgsURL": ["/imgs/projects/mobile/motiva-mobile-1.png"],
+                  "categories": [
+                    "Web Design",
+                    "Design System",
+                    "Visual Identity"
+                  ]
+                },
+                {
+                  "title": "Atafund",
+                  "description": "Immersive website for family education fund",
+                  "imgsURL": ["/imgs/projects/mobile/atafund-mobile-1.png"],
+                  "categories": ["Design system", "Web Design", "Illustration"]
+                },
+                {
+                  "title": "Orbital",
+                  "description": "Engaging animations and illustrations for disruptive blockhain startup",
+                  "imgsURL": ["/imgs/projects/mobile/orbital7-mobile-1.png"],
+                  "categories": ["3D", "Design system", "Startup"]
+                },
+                {
+                  "title": "VestX",
+                  "description": "Packaging a startup from scratch: a logo, a UI kit and a complete design of the platform have been created",
+                  "imgsURL": ["/imgs/projects/mobile/vestx-mobile-1.png"],
+                  "categories": [
+                    "Web Design",
+                    "Design System",
+                    "Visual Identity"
+                  ]
+                },
+                {
+                  "title": "Kazakh Agro Production",
+                  "description": "Rebranding for a large agricultural holding",
+                  "imgsURL": [
+                    "/imgs/projects/mobile/kazakh-agro-mobile-1.png",
+                    "/imgs/projects/mobile/kazakh-agro-mobile-2.png",
+                    "/imgs/projects/mobile/kazakh-agro-mobile-3.png",
+                    "/imgs/projects/mobile/kazakh-agro-mobile-4.png",
+                    "/imgs/projects/mobile/kazakh-agro-mobile-5.png"
+                  ],
+                  "categories": ["Branding", "Design System", "Visual Identity"]
+                },
+                {
+                  "title": "Mobile App Illustrations",
+                  "description": "Character design and illustrations in the style of the Duolingo app",
+                  "imgsURL": [
+                    "/imgs/projects/mobile/illustrations-mobile-1.png",
+                    "/imgs/projects/mobile/illustrations-mobile-2.png",
+                    "/imgs/projects/mobile/illustrations-mobile-3.png",
+                    "/imgs/projects/mobile/illustrations-mobile-4.png",
+                    "/imgs/projects/mobile/illustrations-mobile-5.png"
+                  ],
+                  "categories": [
+                    "Illustrations",
+                    "Character Design",
+                    "Mobile App"
+                  ]
+                },
+                {
+                  "title": "HashCats",
+                  "description": "A full-fledged presentation for the HashCats startup",
+                  "imgsURL": ["/imgs/projects/mobile/hashcats-mobile-1.png"],
+                  "categories": ["Presentation", "Illustration", "Infographics"]
+                },
+                {
+                  "title": "Big Sky Capital",
+                  "description": "Presentation and website for the American venture fund",
+                  "imgsURL": [
+                    "/imgs/projects/mobile/big-sky-capital-mobile-1.png"
+                  ],
+                  "categories": ["Web Design", "Design System", "Presentation"]
+                }
+              ]
+            ],
+            "desktop": [
+              [
+                {
+                  "title": "Dunes",
+                  "description": "Website and digital branding for an innovative crypto-platform",
+                  "imgURL": "/imgs/projects/Rectangle_13.png",
+                  "categories": ["WEB-3", "UX/UI", "Web app"]
+                },
+                {
+                  "title": "Motiva",
+                  "description": "Redesigning website for a global leading implant manufacturer",
+                  "imgURL": "/imgs/projects/Rectangle_14.png",
+                  "categories": [
+                    "Web Design",
+                    "Design System",
+                    "Visual Identity"
+                  ]
+                },
+                {
+                  "title": "Atafund",
+                  "description": "Immersive website for family education fund",
+                  "imgURL": "/imgs/projects/Rectangle_15.png",
+                  "categories": ["Design system", "Web Design", "Illustration"]
+                },
+                {
+                  "title": "Orbital",
+                  "description": "Engaging animations and illustrations for disruptive blockhain startup",
+                  "imgURL": "/imgs/projects/Rectangle_16.png",
+                  "categories": ["3D", "Design system", "Startup"]
+                }
+              ]
+            ]
           }
         },
-        "header": "Contact us"
+        "about_us": {
+          "bottom_text": "Check out the Forbes article",
+          "experience": [
+            {
+              "banner_number": "40+",
+              "description": {
+                "years": "years of",
+                "combined": "combined",
+                "experience": "experience"
+              }
+            },
+            {
+              "banner_number": "300+",
+              "description": {
+                "title": "projects in",
+                "australia": "Australia",
+                "usa": "USA",
+                "cis": "and CIS"
+              }
+            }
+          ]
+        },
+        "faq": {
+          "header": "FAQ",
+          "accordion": [
+            {
+              "title": "How much do you charge for a design project?",
+              "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi laboriosam cum minus ipsum facere corporis sit sunt nisi nobis veritatis quasi voluptas ipsam error quia, ullam, voluptates praesentium repellendus reprehenderit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi laboriosam cum minus ipsum facere corporis sit sunt nisi nobis veritatis quasi voluptas ipsam error quia, ullam, voluptates praesentium repellendus reprehenderit."
+            },
+            {
+              "title": "What sets Ronin apart from other design agencies?",
+              "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, cupiditate! Corrupti vero numquam iusto ex fugiat quos saepe quidem, consequatur nobis nesciunt earum natus quod corporis praesentium libero repellendus nulla exercitationem veritatis quaerat unde harum ratione. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, cupiditate! Corrupti vero numquam iusto ex fugiat quos saepe quidem, consequatur nobis nesciunt earum natus quod corporis praesentium libero repellendus nulla exercitationem veritatis quaerat unde harum ratione."
+            },
+            {
+              "title": "Are you open to working with startups?",
+              "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu"
+            },
+
+            {
+              "title": "Do you work with clients in different time zones?",
+              "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quю Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu"
+            },
+
+            {
+              "title": "Can you assist us in redesigning our B2B/enterprise software?",
+              "content": "Lorem quam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem quam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu"
+            }
+          ]
+        }
       }
     }
   }

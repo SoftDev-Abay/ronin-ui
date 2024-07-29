@@ -36,79 +36,6 @@ const projectsDesktop = [
   },
 ];
 
-// vestx-mobile-1.png
-// VestX
-// Packaging a startup from scratch: a logo, a UI kit and a complete design of the platform have been created
-//
-// Web Design
-// •
-// Design System
-// •
-// Visual Identity
-
-// orbital7-mobile-1.png
-// Orbital7
-// Engaging animations and illustrations for disruptive blockhain startup
-// 3D
-// •
-// Design system
-// •
-// Startup
-
-// motiva-mobile-1.png
-// Motiva
-// Redesigning website for a global leading implant manufacturer
-// Web Design
-// •
-// Design System
-// •
-// Visual Identity
-
-// kazakh-agro-mobile-1.png
-// Kazakh Agro Production
-// Rebranding for a large agricultural holding
-// Branding
-// •
-// Design System
-// •
-// Visual Identity
-
-// illustrations-mobile-1.png
-// Mobile App Illustrations
-// Character design and illustrations in the style of the Duolingo app
-// Illustrations
-// •
-// Character Design
-// •
-// Mobile App
-
-// hashcats-mobile-1.png
-// HashCats
-// A full-fledged presentation for the HashCats startup
-// Presentation
-// •
-// Illustration
-// •
-// Infographics
-
-// big-sky-capital-mobile-1.png
-// Big Sky Capital
-// Presentation and website for the American venture fund
-// Web Design
-// •
-// Design System
-// •
-// Presentation
-
-// atafund-mobile-1.png
-// Atafund
-// Immersive website for family education fund
-// Design system
-// •
-// Web Design
-// •
-// Illustration
-
 const projectsMobile = [
   {
     title: "Dunes",
@@ -192,14 +119,24 @@ const projectsMobile = [
 const PortfolioSection = () => {
   // determine if current device is mobile or desktop
 
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(1024); // You might choose a default for desktop or mobile
 
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
+    // This function will set the width state based on the window's innerWidth
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    // Add event listener when the component mounts
     window.addEventListener("resize", handleResize);
+    // Call handleResize immediately to set the initial width
+    handleResize();
+
+    // Return a clean-up function to remove the event listener
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Determine if the current device is mobile or desktop
   const isMobile = width < 768;
 
   return (

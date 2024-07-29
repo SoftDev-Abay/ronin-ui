@@ -19,9 +19,9 @@ const ChevroletRightIcon = ({
         opacity="0.4"
         d="M16.5 33L27.5 22L16.5 11"
         stroke={color}
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

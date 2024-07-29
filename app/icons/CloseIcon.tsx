@@ -20,14 +20,14 @@ const CloseIcon = ({
       <path
         d="M9 9L19.6066 19.6066"
         stroke={color}
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
       <path
         d="M9 19.6067L19.6066 9.00009"
         stroke={color}
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );

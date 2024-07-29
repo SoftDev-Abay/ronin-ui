@@ -21,9 +21,9 @@ const MenuIcon = ({
       <path
         d="M21.3574 14H6.35742M21.3574 8H6.35742M21.3574 20H6.35742"
         stroke="black"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
