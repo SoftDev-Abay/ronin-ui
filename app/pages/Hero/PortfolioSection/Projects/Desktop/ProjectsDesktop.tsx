@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from "../../../ProjectCard/ProjectCard";
 import Button from "@/app/components/Button/Button";
 import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
+import SlideReveal from "@/app/components/SlideReveal/SlideReveal";
 
 import "./style.scss";
 
@@ -19,39 +20,58 @@ interface ProjectsProps {
 const ProjectsDesktop = ({ projects }: ProjectsProps) => {
   return (
     <div className="projects-desktop">
-      <ProjectCard
-        key={projects[0].title}
-        title={projects[0].title}
-        description={projects[0].description}
-        imgURL={projects[0].imgURL}
-        categories={projects[0].categories}
-        className="main"
-      />
-      <ProjectCard
-        key={projects[1].title}
-        title={projects[1].title}
-        description={projects[1].description}
-        imgURL={projects[1].imgURL}
-        categories={projects[1].categories}
-        className="project1"
-      />
-      <ProjectCard
-        key={projects[2].title}
-        title={projects[2].title}
-        description={projects[2].description}
-        imgURL={projects[2].imgURL}
-        categories={projects[2].categories}
-        className="project2"
-      />
+      <div className="main">
+        <SlideReveal>
+          <ProjectCard
+            key={projects[0].title}
+            title={projects[0].title}
+            description={projects[0].description}
+            imgURL={projects[0].imgURL}
+            categories={projects[0].categories}
+            className="desktop-project-card"
+          />
+        </SlideReveal>
+      </div>
+
+      <div className="project1">
+        <SlideReveal>
+          <ProjectCard
+            key={projects[1].title}
+            title={projects[1].title}
+            description={projects[1].description}
+            imgURL={projects[1].imgURL}
+            categories={projects[1].categories}
+            className="desktop-project-card"
+          />
+        </SlideReveal>
+      </div>
+
+      <div className="project2">
+        <SlideReveal delay={0.6}>
+          <ProjectCard
+            key={projects[2].title}
+            title={projects[2].title}
+            description={projects[2].description}
+            imgURL={projects[2].imgURL}
+            categories={projects[2].categories}
+            className="desktop-project-card"
+          />
+        </SlideReveal>
+      </div>
+
       <div className="see-more">
-        <ProjectCard
-          key={projects[3].title}
-          title={projects[3].title}
-          description={projects[3].description}
-          imgURL={projects[3].imgURL}
-          categories={projects[3].categories}
-          className="see-more-project"
-        />
+        <div className="see-more-project">
+          <SlideReveal>
+            <ProjectCard
+              key={projects[3].title}
+              title={projects[3].title}
+              description={projects[3].description}
+              imgURL={projects[3].imgURL}
+              categories={projects[3].categories}
+              className="desktop-project-card"
+            />
+          </SlideReveal>
+        </div>
         <div className="button-wrapper">
           <Button className="hightlighted-btn">
             <span>See more</span>

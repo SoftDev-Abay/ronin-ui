@@ -8,7 +8,9 @@ const AboutSection = () => {
     <div className="container-max-width-1920 about-section padding-wrapper">
       <div className="main">
         <div className="experience experience-1">
-          <div className="banner-number">40+</div>
+          <div className="banner-number">
+            <span className="number">40</span>+
+          </div>
           <div className="banner-description-wrapper">
             <div className="banner-description-content">
               <div className="column">
@@ -70,7 +72,9 @@ const AboutSection = () => {
               </div>
             </div>
           </div>
-          <div className="banner-number">300+</div>
+          <div className="banner-number">
+            <span className="number">300</span>+
+          </div>
         </div>
       </div>
       <div className="bottom-text-wrapper">
@@ -78,7 +82,7 @@ const AboutSection = () => {
           <span>
             Check out the <strong>Forbes</strong> article
           </span>
-          <ArrowRightIcon width={34} height={24} color="#090C21" />
+          <ArrowRightIcon width={34} height={24} color="#000000" />
         </div>
       </div>
     </div>

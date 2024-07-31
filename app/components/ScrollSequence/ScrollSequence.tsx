@@ -7,6 +7,8 @@ interface ScrollSequenceProps {
   imagePath: string;
   canvasWidth: number;
   canvasHeight: number;
+  parentRef: React.RefObject<HTMLDivElement>;
+  className?: string;
 }
 
 const ScrollSequence: React.FC<ScrollSequenceProps> = ({
@@ -14,9 +16,9 @@ const ScrollSequence: React.FC<ScrollSequenceProps> = ({
   imagePath,
   canvasWidth,
   canvasHeight,
+  parentRef,
+  className,
 }) => {
-  const parentRef = useRef<HTMLDivElement>(null);
-
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const frames = useRef<HTMLImageElement[]>(new Array(frameCount));
 
@@ -71,14 +73,15 @@ const ScrollSequence: React.FC<ScrollSequenceProps> = ({
   }, [frameCount, canvasWidth, canvasHeight]);
 
   return (
-    <div className="png__sequence" ref={parentRef}>
-      <canvas
-        ref={canvasRef}
-        width={canvasWidth}
-        height={canvasHeight}
-        className="png__sequence__canvas"
-      />
-    </div>
+    // <div className="png__sequence" ref={parentRef}>
+    <canvas
+      ref={canvasRef}
+      width={canvasWidth}
+      height={canvasHeight}
+      //   className="png__sequence__canvas"
+      className={`png__sequence__canvas ${className}`}
+    />
+    // </div>
   );
 };
 

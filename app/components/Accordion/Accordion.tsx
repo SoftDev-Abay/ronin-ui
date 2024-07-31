@@ -31,16 +31,18 @@ const AccordionItem = ({
     >
       <div className="header">
         <h1 className={`title ${isActive ? "gradient-text" : ""}`}>{title}</h1>
-        <span>
-          {isActive ? (
-            <ChevroletDownIcon width={26} height={26} color="#1261FC" />
-          ) : (
-            <ChevroletUpIcon width={26} height={26} color="#9ba1ae" />
-          )}
-        </span>
+
+        <ChevroletUpIcon
+          className="toggle-icon"
+          width={26}
+          height={26}
+          color="rgba(28, 31, 57, 0.4)"
+        />
+
+        {/* <ChevroletDownIcon width={26} height={26} color="#1261FC" /> */}
       </div>
 
-      {isActive && <div className="content">{content}</div>}
+      <div className="content">{content}</div>
     </div>
   );
 };

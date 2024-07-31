@@ -8,7 +8,7 @@
 
   // 518 when inactive
   // + 212px when active
-  min-height: 942px; 
+  min-height: 942px;
 
   .accordion-item {
     padding: 0px 56px;
@@ -17,7 +17,7 @@
     border-radius: 16px;
     cursor: pointer;
 
-    transition: all 0.3s ease;
+    transition: all 0.5s ease-in-out;
 
     .header {
       display: flex;
@@ -29,6 +29,11 @@
         font-weight: 700;
         line-height: 49.68px;
         opacity: 0.6;
+        color: $color-text;
+      }
+
+      .toggle-icon {
+        transition: all 0.3s ease-in-out;
       }
     }
     .content {
@@ -45,6 +50,12 @@
 
       color: $color-text;
 
+      max-height: 0px;
+
+      transition: all 0.5s ease-in-out;
+      overflow: hidden;
+      opacity: 0;
+
       //  before
 
       &::before {
@@ -59,6 +70,20 @@
     }
 
     &.active {
+      .content {
+        max-height: 1000px;
+        opacity: 1;
+      }
+      .header {
+        .toggle-icon {
+          // invert it when active
+          transform: rotateX(180deg);
+          path {
+            stroke: #1261fc;
+          }
+        }
+      }
+
       .header {
         .title {
           opacity: 1;

@@ -2,10 +2,17 @@ import React from "react";
 import Button from "@/app/components/Button/Button";
 import "./style.scss";
 import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
+import ScrollSequence from "@/app/components/ScrollSequence/ScrollSequence";
 const TitleSection = () => {
   return (
-    <div className="title-section padding-wrapper">
-      <section className="banner">
+    <div className="title-section padding-wrapper container-max-width-1920">
+      <section
+        className="banner"
+        style={{
+          position: "sticky",
+          top: "0",
+        }}
+      >
         <img
           className="banner-image"
           src="/imgs/samurai.png"

@@ -50,7 +50,7 @@ const ServicesSection = () => {
   // Preloading images
   useEffect(() => {
     const preloadImages = () => {
-      accordionItems.forEach(item => {
+      accordionItems.forEach((item) => {
         const img = new Image();
         img.src = item.img;
       });
@@ -59,21 +59,23 @@ const ServicesSection = () => {
     preloadImages();
   }, []);
 
-
   return (
     <>
       <div className="padding-wrapper container-max-width-1920 services-section ">
+        <div className="accordion-outer-wrapper">
+
         <Accordion
           items={accordionItems}
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
         />
+        </div>
         <div className="img-wrapper">
           <img
-            key={activeIndex}
+            key={`service-img-${activeIndex ? activeIndex : 0}`}
             src={accordionItems[activeIndex ? activeIndex : 0].img}
           />
-          <div className="hightlight-circle">
+          <div className="highlight-circle">
             <div className="separarator">
               <div className="inner-circle"></div>
             </div>

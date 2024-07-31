@@ -3,6 +3,8 @@
 .about-section {
   padding-top: 203px;
   padding-bottom: 149px;
+  overflow: hidden;
+
 
   .main {
     display: flex;
@@ -53,8 +55,14 @@
 
   .banner-number {
     font-size: 400px;
-    font-weight: 400;
+    font-weight: 100;
 
+    display: flex;
+    gap: 48px;
+    .number {
+      // should have smaller letter spacing
+      letter-spacing: -45px;
+    }
     color: $color-dark-blue;
   }
 
@@ -159,6 +167,11 @@
 
     .banner-number {
       font-size: 300px;
+      gap : 30px;
+      .number {
+        // should have smaller letter spacing
+        letter-spacing: -35px;
+      }
     }
 
     .banner-description-wrapper {
@@ -193,6 +206,12 @@
 
     .banner-number {
       font-size: 200px;
+
+      gap : 20px;
+      .number {
+        // should have smaller letter spacing
+        letter-spacing: -25px;
+      }
     }
 
     .banner-description-wrapper {
@@ -226,6 +245,11 @@
 
     .banner-number {
       font-size: 180px;
+      gap : 20px;
+      .number {
+        // should have smaller letter spacing
+        letter-spacing: -20px;
+      }
     }
 
     .banner-description-wrapper {
@@ -276,6 +300,11 @@
 
     .banner-number {
       font-size: 150px;
+      gap : 20px;
+      .number {
+        // should have smaller letter spacing
+        letter-spacing: -17px;
+      }
     }
 
     .banner-description-wrapper {
@@ -305,6 +334,11 @@
     }
     .banner-number {
       font-size: 120px;
+      gap : 15px;
+      .number {
+        // should have smaller letter spacing
+        letter-spacing: -15px;
+      }
     }
   }
 }

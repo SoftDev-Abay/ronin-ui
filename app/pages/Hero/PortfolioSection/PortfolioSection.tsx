@@ -15,11 +15,12 @@ const projectsDesktop = [
     categories: ["WEB-3", "UX/UI", "Web app"],
   },
   {
-    title: "Motiva",
+    title: "Orbital",
     description:
-      "Redesigning website for a global leading implant manufacturer",
+      "Engaging animations and illustrations for disruptive blockhain startup",
+
     imgURL: "/imgs/projects/Rectangle_14.png",
-    categories: ["Web Design", "Design System", "Visual Identity"],
+    categories: ["3D", "Design system", "Startup"],
   },
   {
     title: "Atafund",
@@ -28,11 +29,11 @@ const projectsDesktop = [
     categories: ["Design system", "Web Design", "Illustration"],
   },
   {
-    title: "Orbital",
+    title: "Motiva",
     description:
-      "Engaging animations and illustrations for disruptive blockhain startup",
+      "Redesigning website for a global leading implant manufacturer",
     imgURL: "/imgs/projects/Rectangle_16.png",
-    categories: ["3D", "Design system", "Startup"],
+    categories: ["Web Design", "Design System", "Visual Identity"],
   },
 ];
 
@@ -149,7 +150,7 @@ const PortfolioSection = () => {
         <ProjectsDesktop projects={projectsDesktop} />
       )}
 
-      <div className="button-wrapper">
+      <div className="mobile-button-wrapper">
         <Button className="hightlighted-btn">
           <span>See more</span>
           <ArrowRightIcon width={45} height={45} color="#F3FBFF" />
