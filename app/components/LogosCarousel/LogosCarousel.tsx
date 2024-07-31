@@ -22,6 +22,16 @@ const LogosCarousel = ({ logoSrcs }: LogosCarouselProps) => {
           <img src={src} />
         ))}
       </div>
+      <div className="logos-slide">
+        {logoSrcs.map((src) => (
+          <img src={src} />
+        ))}
+      </div>
+      <div className="logos-slide">
+        {logoSrcs.map((src) => (
+          <img src={src} />
+        ))}
+      </div>
     </div>
   );
 };

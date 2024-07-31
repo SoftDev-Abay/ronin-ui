@@ -62,7 +62,7 @@ const ServicesSection = () => {
 
   return (
     <>
-      <div className="padding-wrapper services-section">
+      <div className="padding-wrapper container-max-width-1920 services-section ">
         <Accordion
           items={accordionItems}
           activeIndex={activeIndex}

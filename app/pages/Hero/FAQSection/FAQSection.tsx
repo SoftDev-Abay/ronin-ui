@@ -36,7 +36,7 @@ const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <div className="padding-wrapper faq-section-wrapper ">
+    <div className="container-max-width-1920 padding-wrapper faq-section-wrapper ">
       <div className="faq-section-container">
         <h1 className="faq-section-title gradient-text">FAQ</h1>
         <SpecialAccordion
