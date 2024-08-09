@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
 import "./style.scss";
 
@@ -31,6 +31,10 @@ const ScrollSequence: React.FC<ScrollSequenceProps> = ({
     for (let i = 1; i <= frameCount; i++) {
       const img = new Image();
       img.src = currentFrame(i);
+      // img.width = 1920;
+      // img.height = 1080;
+      console.log("img-scr-current", currentFrame(i));
+
       img.onload = () => {
         frames.current[i] = img;
         if (i === 1 && canvasRef.current) {
@@ -79,7 +83,7 @@ const ScrollSequence: React.FC<ScrollSequenceProps> = ({
       width={canvasWidth}
       height={canvasHeight}
       //   className="png__sequence__canvas"
-      className={`png__sequence__canvas ${className}`}
+      className={`${className}`}
     />
     // </div>
   );
