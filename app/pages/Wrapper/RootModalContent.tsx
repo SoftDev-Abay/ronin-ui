@@ -3,34 +3,36 @@ import Link from "next/link";
 import "./style.scss";
 import Button from "@/app/components/Button/Button";
 import ArrowOutwardIcon from "@/app/icons/ArrowOutwardIcon";
-import { useRouter } from "next/router";
-import { useTranslations } from "next-intl";
 import InstagramIcon from "@/app/icons/InstagramIcon";
 import TwitterIcon from "@/app/icons/TwitterIcon";
 import BehanceIcon from "@/app/icons/BehanceIcon";
+import { useTranslation } from "next-i18next";
+
+interface NavigationLink {
+  title: string;
+  link: string;
+}
 
 const RootModalContent = () => {
-  const router = useRouter();
+  const { t } = useTranslation("common");
 
-  const isActive = (path: string) => router.pathname === path;
-
-  const t = useTranslations();
+  const navigationItems = t("wrapper.navigation", {
+    returnObjects: true,
+  }) as NavigationLink[];
 
   return (
     <div className="padding-wrapper root-modal-content">
       <div className="info">
         <div className="language-toggle">EN</div>
         <div className="navigation">
-          <a href="#services">Services</a>
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#blog">Blog</a>
-          <a href="#contact">Contact</a>
+          {navigationItems.map((item) => (
+            <a href={item.link}>{item.title}</a>
+          ))}
         </div>
         <div className="contact-us-info">
-          <p className="subtext">Свяжитесь с нами</p>
+          <p className="subtext">{t("wrapper.root_modal.contact.subtext")}</p>
           <div className="email">
-            <a href="">hi@ronindsgn.com</a>
+            <a href="">{t("wrapper.root_modal.contact.email")}</a>
           </div>
         </div>
         <div className="social">
@@ -38,7 +40,7 @@ const RootModalContent = () => {
           <TwitterIcon width={35} height={35} />
           <BehanceIcon width={35} height={35} />
         </div>
-        <p className="copyright">(с) 2024 ИП «Амангали»</p>
+        <p className="copyright">{t("wrapper.root_modal.copyright")}</p>
       </div>
     </div>
   );

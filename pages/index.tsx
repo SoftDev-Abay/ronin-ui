@@ -8,15 +8,15 @@ import FAQSection from "@/app/pages/Hero/FAQSection/FAQSection";
 import AboutSection from "@/app/pages/Hero/AboutSection/AboutSection";
 import Preloader from "@/app/pages/Preloader/Preloader";
 import ScrollSequence from "@/app/components/ScrollSequence/ScrollSequence";
+import AnimationTitileSection from "@/app/pages/Hero/AnimationTitileSection/AnimationTitileSection";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-export async function getServerSideProps({ locale }: { locale: string }) {
-  try {
-    return {
-      props: {
-        locale,
-      },
-    };
-  } catch (e) {}
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }
 
 const About = () => {
@@ -25,26 +25,7 @@ const About = () => {
     <>
       <Wrapper>
         <TitleSection />
-        {/* <div
-          style={{
-            // width: 100%;
-            // height: 500vh;
-            // position: relative;
-            width: "100%",
-            height: "500vh",
-            position: "relative",
-          }}
-          ref={parentRef}
-        >
-          <ScrollSequence
-            // frameCount={66}
-            frameCount={54}
-            parentRef={parentRef}
-            imagePath="/imgs/animations/samurai/fin_30005"
-            canvasWidth={1920}
-            canvasHeight={1080}
-          />
-        </div> */}
+        {/* <AnimationTitileSection /> */}
         <PartnersSection />
         <ServicesSection />
         <PortfolioSection />

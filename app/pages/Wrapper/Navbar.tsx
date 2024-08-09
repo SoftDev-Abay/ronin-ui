@@ -5,8 +5,25 @@ import MenuIcon from "../../icons/MenuIcon";
 import Button from "@/app/components/Button/Button";
 import SideModal from "@/app/components/Modals/SideModal/SideModal";
 import RootModalContent from "./RootModalContent";
-import { useTranslations } from "next-intl";
+import LanguageToggleButton from "@/app/components/LanguageToggle/LanguageToggleButton";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+import { link } from "fs";
+
+interface NavigationLink {
+  title: string;
+  link: string;
+}
+
 const Navbar = () => {
+  const { locale } = useRouter();
+
+  const { t } = useTranslation("common");
+
+  const navigationItems = t("wrapper.navigation", {
+    returnObjects: true,
+  }) as NavigationLink[];
+
   const [isShow, setIsShow] = React.useState(false);
 
   const handleClose = () => {
@@ -16,8 +33,6 @@ const Navbar = () => {
   const handleOpen = () => {
     setIsShow(true);
   };
-
-  const t = useTranslations();
 
   return (
     <>
@@ -41,29 +56,13 @@ const Navbar = () => {
           </div>
 
           <div className="links">
-            <a href="">Services</a>
-            <a href="">Work</a>
-            <a href="">About Us</a>
-            <a href="">Blog</a>
+            {navigationItems.map((item) => (
+              <a href={item.link}>{item.title}</a>
+            ))}
 
-            <Button>Let’s chat</Button>
-            <a href="">EN</a>
+            <Button>{t("wrapper.navbar.action_button")}</Button>
+            <LanguageToggleButton />
           </div>
-
-          {/* <div
-            className={`burger ${isShow ? "is-active" : ""}`}
-            onClick={() => setIsShow((prev) => !prev)}
-          >
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-            <span className="burger-line"></span>
-          </div> */}
-          {/* <div
-            className="menu-icon-wrapper"
-            onClick={() => setIsShow((prev) => !prev)}
-          >
-            <MenuIcon width={28} height={28} />
-          </div> */}
 
           <MenuIcon
             onClick={() => setIsShow((prev) => !prev)}

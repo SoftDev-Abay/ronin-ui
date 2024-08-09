@@ -3,32 +3,44 @@ import "./style.scss";
 import InstagramIcon from "@/app/icons/InstagramIcon";
 import TwitterIcon from "@/app/icons/TwitterIcon";
 import BehanceIcon from "@/app/icons/BehanceIcon";
+import { useTranslation } from "next-i18next";
+
+interface NavigationLink {
+  title: string;
+  link: string;
+}
 
 const Footer = () => {
+  const { t } = useTranslation("common");
+
+  const navigationItems = t("wrapper.navigation", {
+    returnObjects: true,
+  }) as NavigationLink[];
+
   return (
     <div className="footer">
       <div className="padding-wrapper footer-container">
         <div className="left">
           <div className="info">
             <div className="navigation">
-              <a href="#services">Services</a>
-              <a href="#work">Work</a>
-              <a href="#about">About</a>
-              <a href="#blog">Blog</a>
-              <a href="#contact">Contact</a>
+              {navigationItems.map((item) => (
+                <a href={item.link}>{item.title}</a>
+              ))}
             </div>
             <div className="social">
               <InstagramIcon width={35} height={35} />
               <TwitterIcon width={35} height={35} />
               <BehanceIcon width={35} height={35} />
             </div>
-            <p className="email">hi@ronindsgn.com</p>
+            <p className="email">{t("wrapper.footer.email")}</p>
           </div>
           <p className="company">
             <span className="long-text">
-              (с) 2024 Individual Entrepreneur "Amangali"
+              {t("wrapper.footer.copyright_long")}
             </span>
-            <span className="short-text">(с) 2024 Ronin, LLC</span>
+            <span className="short-text">
+              {t("wrapper.footer.copyright_short")}
+            </span>
           </p>
         </div>
 
@@ -36,7 +48,7 @@ const Footer = () => {
           <div className="logo-glass-3d">
             <img src="/imgs/logo-3d-glass-cropped.png" alt="" />
           </div>
-          <p className="rights">All rights reserved</p>
+          <p className="rights">{t("wrapper.footer.rights")}</p>
         </div>
       </div>
     </div>

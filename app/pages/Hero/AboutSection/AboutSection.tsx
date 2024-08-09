@@ -1,11 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useTransition } from "react";
 import DynamicScrollAnimation from "@/app/components/DynamicScrollAnimation/DynamicScrollAnimation";
 import "./style.scss";
 import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
+import { useTranslation } from "next-i18next";
 
 const AboutSection = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="container-max-width-1920 about-section padding-wrapper">
+    <div
+      className="container-max-width-1920 about-section padding-wrapper"
+      id="about"
+    >
       <div className="main">
         <div className="experience experience-1">
           <div className="banner-number">
@@ -15,19 +21,29 @@ const AboutSection = () => {
             <div className="banner-description-content">
               <div className="column">
                 <DynamicScrollAnimation direction="left" maxTranslateX={100}>
-                  <span>years of</span>
+                  <span>
+                    {t("pages.hero.sections.about_us.content.experience.years")}
+                  </span>
                 </DynamicScrollAnimation>
                 <img src="/imgs/about/years.jpeg" alt="" />
               </div>
               <div className="column">
                 <img src="/imgs/about/combined.jpeg" alt="" />
                 <DynamicScrollAnimation direction="right" maxTranslateX={100}>
-                  <span>combined</span>
+                  <span>
+                    {t(
+                      "pages.hero.sections.about_us.content.experience.combined"
+                    )}
+                  </span>
                 </DynamicScrollAnimation>
               </div>
               <div className="column">
                 <DynamicScrollAnimation direction="left" maxTranslateX={100}>
-                  <span>experience</span>
+                  <span>
+                    {t(
+                      "pages.hero.sections.about_us.content.experience.experience"
+                    )}
+                  </span>
                 </DynamicScrollAnimation>
                 <img src="/imgs/about/experience.png" alt="" />
               </div>
@@ -38,7 +54,9 @@ const AboutSection = () => {
           <div className="banner-description-wrapper">
             <div className="banner-description-content">
               <DynamicScrollAnimation direction="left" maxTranslateX={100}>
-                <span>projects in</span>
+                <span>
+                  {t("pages.hero.sections.about_us.content.countries.title")}
+                </span>
               </DynamicScrollAnimation>
               <div className="column">
                 <img
@@ -47,7 +65,11 @@ const AboutSection = () => {
                   alt=""
                 />
                 <DynamicScrollAnimation direction="right" maxTranslateX={100}>
-                  <span>Australia</span>
+                  <span>
+                    {t(
+                      "pages.hero.sections.about_us.content.countries.australia"
+                    )}
+                  </span>
                 </DynamicScrollAnimation>
               </div>
               <div className="column">
@@ -57,7 +79,9 @@ const AboutSection = () => {
                   alt=""
                 />{" "}
                 <DynamicScrollAnimation direction="right" maxTranslateX={100}>
-                  <span>USA</span>
+                  <span>
+                    {t("pages.hero.sections.about_us.content.countries.usa")}
+                  </span>
                 </DynamicScrollAnimation>
               </div>
               <div className="column">
@@ -67,7 +91,9 @@ const AboutSection = () => {
                   alt=""
                 />
                 <DynamicScrollAnimation direction="right" maxTranslateX={100}>
-                  <span>and CIS</span>
+                  <span>
+                    {t("pages.hero.sections.about_us.content.countries.cis")}
+                  </span>
                 </DynamicScrollAnimation>
               </div>
             </div>
@@ -80,7 +106,11 @@ const AboutSection = () => {
       <div className="bottom-text-wrapper">
         <div className="bottom-text">
           <span>
-            Check out the <strong>Forbes</strong> article
+            {t("pages.hero.sections.about_us.bottom_text.first")}
+            <strong>
+              {t("pages.hero.sections.about_us.bottom_text.second")}
+            </strong>{" "}
+            {t("pages.hero.sections.about_us.bottom_text.third")}
           </span>
           <ArrowRightIcon width={34} height={24} color="#000000" />
         </div>

@@ -5,6 +5,7 @@ import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
 import SlideReveal from "@/app/components/SlideReveal/SlideReveal";
 
 import "./style.scss";
+import { useTranslation } from "next-i18next";
 
 interface Project {
   title: string;
@@ -13,11 +14,13 @@ interface Project {
   categories: string[];
 }
 
-interface ProjectsProps {
-  projects: Project[];
-}
+const ProjectsDesktop = () => {
+  const { t } = useTranslation();
 
-const ProjectsDesktop = ({ projects }: ProjectsProps) => {
+  const projects = t("pages.hero.sections.work.projects.desktop", {
+    returnObjects: true,
+  }) as Project[];
+
   return (
     <div className="projects-desktop">
       <div className="main">
@@ -74,7 +77,7 @@ const ProjectsDesktop = ({ projects }: ProjectsProps) => {
         </div>
         <div className="button-wrapper">
           <Button className="hightlighted-btn">
-            <span>See more</span>
+            <span>{t("pages.hero.sections.work.action_button")}</span>
             <ArrowRightIcon width={45} height={45} color="#F3FBFF" />
           </Button>
         </div>
