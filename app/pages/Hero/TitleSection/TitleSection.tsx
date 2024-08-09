@@ -3,7 +3,10 @@ import Button from "@/app/components/Button/Button";
 import "./style.scss";
 import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
 import ScrollSequence from "@/app/components/ScrollSequence/ScrollSequence";
+import { useTranslation } from "next-i18next";
 const TitleSection = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="title-section padding-wrapper container-max-width-1920">
       <section
@@ -22,16 +25,18 @@ const TitleSection = () => {
         />
         <div className="banner-inner">
           <h1>
-            Ronin is a <span className="gradient-text">global</span> branding
-            and UX/UI agency
+            {t("pages.hero.sections.title_section.heading.first")}
+            <span className="gradient-text">
+              {t("pages.hero.sections.title_section.heading.second")}
+            </span>
+            {t("pages.hero.sections.title_section.heading.third")}
           </h1>
-          <p>
-            We create effective websites, stunning pitch decks and unique
-            brands.
-          </p>
+          <p>{t("pages.hero.sections.title_section.subheading")}</p>
           <div className="button-wrapper">
             <Button className="hightlighted-btn">
-              <span>See our services</span>
+              <span>
+                {t("pages.hero.sections.title_section.action_button")}
+              </span>
               <ArrowRightIcon width={45} height={45} color="#F3FBFF" />
             </Button>
           </div>

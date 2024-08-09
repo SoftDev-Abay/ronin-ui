@@ -39,7 +39,11 @@
     "hero": {
       "sections": {
         "title_section": {
-          "heading": "Ronin is a global branding and UX/UI agency",
+          "heading": {
+            "first": "Ronin is a  and UX/UI agency",
+            "second": " global ",
+            "third": "branding and UX/UI agency"
+          },
           "subheading": "We create effective websites, stunning pitch decks and unique brands.",
           "action_button": "See our services"
         },
