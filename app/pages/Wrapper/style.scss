@@ -23,7 +23,7 @@
       // margin-left: auto;
       // margin-right: auto;
 
-      padding-top: 80px;
+      // padding-top: 80px;
       padding-bottom: 80px;
       background-color: $color-secondary;
     }
@@ -35,15 +35,24 @@
     }
 
     .navbar {
+      position: relative;
+      z-index: 2;
+
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
       max-width: 1920px;
       width: 100%;
-      margin-left: auto;
-      margin-right: auto;
       .navbar-container {
+        position: relative;
+        z-index: 1000;
+
         padding-top: 24px;
         padding-bottom: 24px;
         width: 100%;
-        background-color: $color-secondary;
+        background: transparent;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -69,70 +78,6 @@
           display: none;
           @media (max-width: 1104px) {
             display: block;
-          }
-        }
-
-        .burger {
-          position: relative;
-          display: block;
-          cursor: pointer;
-          user-select: none;
-          // order: -1;
-          z-index: 12;
-          width: 1.6rem;
-          height: 1.15rem;
-          margin-right: 1.25rem;
-          border: none;
-          outline: none;
-          background: none;
-          visibility: visible;
-          transform: rotate(0deg);
-          transition: 0.35s ease;
-
-          @media only screen and (min-width: 1024px) {
-            display: none;
-            visibility: hidden;
-          }
-
-          &-line {
-            position: absolute;
-            display: block;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            border: none;
-            outline: none;
-            opacity: 1;
-            border-radius: 1rem;
-            transform: rotate(0deg);
-            background-color: var(--color-black-300);
-            transition: 0.25s ease-in-out;
-
-            &:nth-child(1) {
-              top: 0px;
-            }
-            &:nth-child(2) {
-              top: 0.5rem;
-              // width: 70%;
-            }
-            &:nth-child(3) {
-              top: 1rem;
-            }
-          }
-
-          &.is-active .burger-line {
-            &:nth-child(1) {
-              top: 0.5rem;
-              transform: rotate(135deg);
-            }
-            &:nth-child(2) {
-              opacity: 0;
-              visibility: hidden;
-            }
-            &:nth-child(3) {
-              top: 0.5rem;
-              transform: rotate(-135deg);
-            }
           }
         }
 

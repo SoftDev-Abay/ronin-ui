@@ -1,92 +1,77 @@
-import React, { useRef, useEffect, useState } from "react";
-
-import "./style.scss";
+import React, { useRef, useEffect } from "react";
 
 interface ScrollSequenceProps {
   frameCount: number;
-  imagePath: string;
   canvasWidth: number;
   canvasHeight: number;
   parentRef: React.RefObject<HTMLDivElement>;
   className?: string;
+  frames: React.MutableRefObject<HTMLImageElement[]>;
 }
 
-const ScrollSequence: React.FC<ScrollSequenceProps> = ({
+const ScrollAnimation: React.FC<ScrollSequenceProps> = ({
   frameCount,
-  imagePath,
   canvasWidth,
   canvasHeight,
   parentRef,
   className,
+  frames,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const frames = useRef<HTMLImageElement[]>(new Array(frameCount));
+  const initialDrawn = useRef(false);  // To track if the initial frame has been drawn
 
-  // Function to format image paths
-  const currentFrame = (index: number) =>
-    `${imagePath}${index.toString().padStart(4, "0")}.png`;
-
-  // Preload images
-  useEffect(() => {
-    for (let i = 1; i <= frameCount; i++) {
-      const img = new Image();
-      img.src = currentFrame(i);
-      // img.width = 1920;
-      // img.height = 1080;
-      console.log("img-scr-current", currentFrame(i));
-
-      img.onload = () => {
-        frames.current[i] = img;
-        if (i === 1 && canvasRef.current) {
-          const context = canvasRef.current.getContext("2d");
-          if (context) {
-            context.drawImage(img, 0, 0);
-          }
-        }
-      };
-    }
-  }, [frameCount, imagePath]);
-
-  // Update canvas based on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (!parentRef.current) return;
+      if (!parentRef.current || !canvasRef.current) return;
 
-      const scrollTop = document.documentElement.scrollTop;
-      const maxScrollTop = parentRef.current.scrollHeight;
-      const scrollFraction = scrollTop / maxScrollTop;
+      const scrollTop = document.documentElement.scrollTop || parentRef.current.scrollTop;
+      const maxScrollTop = parentRef.current.scrollHeight - window.innerHeight;
+      const scrollFraction = Math.min(1, scrollTop / maxScrollTop);
       const frameIndex = Math.min(
         frameCount - 1,
-        Math.ceil(scrollFraction * frameCount)
+        Math.round(scrollFraction * (frameCount - 1))
       );
 
-      if (canvasRef.current) {
-        const context = canvasRef.current.getContext("2d");
-        if (context && frames.current[frameIndex + 1]) {
+      const context = canvasRef.current.getContext("2d");
+      if (context && frames.current[frameIndex]) {
+        context.clearRect(0, 0, canvasWidth, canvasHeight);
+        context.drawImage(frames.current[frameIndex], 0, 0, canvasWidth, canvasHeight);
+      }
+    };
+
+    const drawInitialFrame = () => {
+      const canvas = canvasRef.current;
+      const firstImage = frames.current[0];
+      if (canvas && firstImage && !initialDrawn.current) {
+        const context = canvas.getContext("2d");
+        if (context) {
           context.clearRect(0, 0, canvasWidth, canvasHeight);
-          context.drawImage(frames.current[frameIndex + 1], 0, 0);
+          context.drawImage(firstImage, 0, 0, canvasWidth, canvasHeight);
+          initialDrawn.current = true;  // Mark as drawn to prevent future redraws
         }
       }
     };
 
+    // Attempt to draw the first frame immediately and then on an interval until success
+    drawInitialFrame();
+    const attemptDrawInterval = setInterval(drawInitialFrame, 100);
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
+      clearInterval(attemptDrawInterval);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [frameCount, canvasWidth, canvasHeight]);
+  }, [frameCount, canvasWidth, canvasHeight, frames, parentRef]);
 
   return (
-    // <div className="png__sequence" ref={parentRef}>
     <canvas
       ref={canvasRef}
       width={canvasWidth}
       height={canvasHeight}
-      //   className="png__sequence__canvas"
-      className={`${className}`}
+      className={className}
     />
-    // </div>
   );
 };
 
-export default ScrollSequence;
+export default ScrollAnimation;

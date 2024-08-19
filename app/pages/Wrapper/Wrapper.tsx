@@ -8,7 +8,7 @@ const Wrapper: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <div className="layout-wrapper">
       <div className="layout">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="layout-content">{children}</div>
         <Footer />
       </div>

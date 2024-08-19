@@ -24,8 +24,8 @@ const About = () => {
   return (
     <>
       <Wrapper>
-        <TitleSection />
-        {/* <AnimationTitileSection /> */}
+        {/* <TitleSection /> */}
+        <AnimationTitileSection />
         <PartnersSection />
         <ServicesSection />
         <PortfolioSection />

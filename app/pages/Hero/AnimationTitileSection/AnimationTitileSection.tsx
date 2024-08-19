@@ -2,18 +2,36 @@ import React from "react";
 import Button from "@/app/components/Button/Button";
 import "./style.scss";
 import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
-import ScrollSequence from "@/app/components/ScrollSequence/ScrollSequence";
+import Navbar from "../../Wrapper/Navbar";
+import dynamic from "next/dynamic";
+import useScreenWidth from "@/app/hooks/useScreenWidth";
+
+// Dynamically import the ScrollSequence component without server-side rendering
+const AnimationController = dynamic(
+  () => import("@/app/components/ScrollSequence/AnimationController"),
+  {
+    ssr: false,
+  }
+);
+
 const AnimationTitileSection = () => {
   const parentRef = React.useRef<HTMLDivElement>(null);
 
+  const screenWidth = useScreenWidth();
+  const isDesktop = screenWidth > 1104; // Define desktop as greater than 768px
+
   return (
-    <div
-      className="  title-section   "
-      ref={parentRef}
-    >
+    <div className="  title-section   " ref={parentRef}>
       <div className="title-section-content">
+        <Navbar />
         <div className="container-max-width-1920 padding-wrapper banner">
           <div className="banner-inner">
+            <img
+              className="logo-img"
+              src="/imgs/logo-3d-glass-blue.png"
+              alt="Ronin"
+            />
+
             <h1>
               Ronin is a <span className="gradient-text">global</span> branding
               and UX/UI agency
@@ -30,18 +48,19 @@ const AnimationTitileSection = () => {
             </div>
           </div>
         </div>
-        <div className="canvas-wrapper">
-          <div className="canvas-container">
-            <ScrollSequence
-              // frameCount={66}
-              frameCount={58}
-              parentRef={parentRef}
-              imagePath="/imgs/animations/samurai-compressed/fin"
-              canvasWidth={1920}
-              canvasHeight={1080}
-            />
+        {isDesktop && (
+          <div className="canvas-wrapper">
+            <div className="canvas-container">
+              <AnimationController
+                frameCount={58}
+                parentRef={parentRef}
+                imagePath="/imgs/animations/samurai-compressed-croped-2/fin"
+                canvasWidth={1340}
+                canvasHeight={834}
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
