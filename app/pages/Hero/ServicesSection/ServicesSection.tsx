@@ -4,6 +4,7 @@ import Accordion from "@/app/components/Accordion/Accordion";
 import "./style.scss";
 import { useTranslation } from "next-i18next";
 import NextImage from "next/image";
+import useScreenWidth from "@/app/hooks/useScreenWidth";
 
 interface AccordionItem {
   title: string;
@@ -13,6 +14,11 @@ interface AccordionItem {
 
 const ServicesSection = () => {
   const { t } = useTranslation();
+
+  const width = useScreenWidth();
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  const isDesktop = width > 1115;
 
   const accordionItems = t("pages.hero.sections.services.accordion", {
     returnObjects: true,
@@ -31,6 +37,33 @@ const ServicesSection = () => {
 
     preloadImages();
   }, []);
+
+  useEffect(() => {
+    if (isDesktop) {
+      const preloadImages = () => {
+        let loadedCount = 0;
+        accordionItems.forEach((item) => {
+          const img = new Image();
+          img.src = item.img;
+          img.onload = () => {
+            loadedCount += 1;
+            if (loadedCount === accordionItems.length) {
+              setImagesLoaded(true);
+            }
+          };
+        });
+      };
+
+      preloadImages();
+    } else {
+      // If not desktop, no need to preload, show content immediately
+      setImagesLoaded(true);
+    }
+  }, [isDesktop, accordionItems]);
+
+  if (isDesktop && !imagesLoaded) {
+    return <div>Loading...</div>; // Or any loading spinner or message
+  }
 
   return (
     <>
