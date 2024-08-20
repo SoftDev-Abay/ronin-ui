@@ -57,7 +57,7 @@ const AnimationTitileSection = () => {
               <AnimationController
                 frameCount={58}
                 parentRef={parentRef}
-                imagePath="/imgs/animations/samurai-compressed-croped-2/fin"
+                imagePath="/imgs/animations/samurai-compressed-croped-3/fin"
                 canvasWidth={1340}
                 canvasHeight={834}
               />
