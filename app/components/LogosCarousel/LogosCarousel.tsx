@@ -46,17 +46,6 @@ const LogosCarousel = ({ logoSrcs }: LogosCarouselProps) => {
           />
         ))}
       </div>
-      <div className="logos-slide">
-        {logoSrcs.map((src, index) => (
-          <Image
-            src={src}
-            width={135.13}
-            height={50}
-            alt="partner-logo"
-            key={"logo-4-" + index}
-          />
-        ))}
-      </div>
     </div>
   );
 };

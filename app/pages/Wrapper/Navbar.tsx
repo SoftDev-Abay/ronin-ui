@@ -44,6 +44,7 @@ const Navbar = () => {
               alt="Logo"
               width="153"
               height="34"
+              loading="eager"
             />
             <Image
               className="logo-short"
@@ -51,6 +52,7 @@ const Navbar = () => {
               alt="Logo"
               width={34}
               height={28.21}
+              loading="eager"
             />
           </div>
 
