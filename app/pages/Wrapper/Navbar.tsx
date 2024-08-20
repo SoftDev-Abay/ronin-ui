@@ -9,7 +9,6 @@ import LanguageToggleButton from "@/app/components/LanguageToggle/LanguageToggle
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import { link } from "fs";
-
 interface NavigationLink {
   title: string;
   link: string;
@@ -39,14 +38,14 @@ const Navbar = () => {
       <div className="navbar">
         <div className="padding-wrapper navbar-container">
           <div className="logo">
-            <img
+            <Image
               className="logo-full"
               src="/logo.svg"
               alt="Logo"
               width="153"
               height="34"
             />
-            <img
+            <Image
               className="logo-short"
               src="/logo-short-blue.svg"
               alt="Logo"

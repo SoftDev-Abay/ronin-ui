@@ -4,6 +4,7 @@ import InstagramIcon from "@/app/icons/InstagramIcon";
 import TwitterIcon from "@/app/icons/TwitterIcon";
 import BehanceIcon from "@/app/icons/BehanceIcon";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 
 interface NavigationLink {
   title: string;
@@ -46,7 +47,12 @@ const Footer = () => {
 
         <div className="right">
           <div className="logo-glass-3d">
-            <img src="/imgs/logo-3d-glass-cropped.png" alt="" />
+            <Image
+              src="/imgs/logo-3d-glass-cropped.png"
+              alt="footer-logo"
+              width={581}
+              height={444}
+            />
           </div>
           <p className="rights">{t("wrapper.footer.rights")}</p>
         </div>

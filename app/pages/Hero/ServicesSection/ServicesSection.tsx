@@ -3,6 +3,7 @@ import Accordion from "@/app/components/Accordion/Accordion";
 
 import "./style.scss";
 import { useTranslation } from "next-i18next";
+import NextImage from "next/image";
 
 interface AccordionItem {
   title: string;
@@ -45,9 +46,12 @@ const ServicesSection = () => {
           />
         </div>
         <div className="img-wrapper">
-          <img
+          <NextImage
             key={`service-img-${activeIndex ? activeIndex : 0}`}
             src={accordionItems[activeIndex ? activeIndex : 0].img}
+            alt="Service"
+            width={828}
+            height={828}
           />
           <div className="highlight-circle">
             <div className="separarator">

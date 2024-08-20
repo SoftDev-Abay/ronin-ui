@@ -7,6 +7,7 @@ import "./style.scss";
 import ChevroletRightIcon from "@/app/icons/ChevroletRightIcon";
 import ChevroletLeftIcon from "@/app/icons/ChevroletLeftIcon";
 import { Navigation } from 'swiper/modules';
+import Image from 'next/image';
 
 interface Project {
   title: string;
@@ -67,7 +68,13 @@ const ProjectModalContent: React.FC<ProjectModalContentProps> = ({ project }) =>
         >
           {project.imgsURL.map((imgURL) => (
             <SwiperSlide key={imgURL}>
-              <img src={imgURL} alt={project.title} />
+              {/* <img src={imgURL} alt={project.title} /> */}
+              <Image
+                src={imgURL}
+                alt={project.title}
+                width={269}
+                height={236}
+              />
             </SwiperSlide>
           ))}
         </Swiper>

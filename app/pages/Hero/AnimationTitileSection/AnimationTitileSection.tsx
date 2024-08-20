@@ -5,6 +5,7 @@ import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
 import Navbar from "../../Wrapper/Navbar";
 import dynamic from "next/dynamic";
 import useScreenWidth from "@/app/hooks/useScreenWidth";
+import Image from "next/image";
 
 // Dynamically import the ScrollSequence component without server-side rendering
 const AnimationController = dynamic(
@@ -26,10 +27,12 @@ const AnimationTitileSection = () => {
         <Navbar />
         <div className="container-max-width-1920 padding-wrapper banner">
           <div className="banner-inner">
-            <img
+            <Image
               className="logo-img"
               src="/imgs/logo-3d-glass-blue.png"
               alt="Ronin"
+              width={209.55}
+              height={194.31}
             />
 
             <h1>

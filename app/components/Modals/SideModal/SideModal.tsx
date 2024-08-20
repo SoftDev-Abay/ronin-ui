@@ -8,6 +8,7 @@ import Backdrop from "../../Backdrop/Backdrop";
 import FacebookIcon from "@/app/icons/FacebookIcon";
 import InstagramIcon from "@/app/icons/InstagramIcon";
 import YoutubeIcon from "@/app/icons/YoutubeIcon";
+import Image from "next/image";
 
 type Props = {
   isShow: boolean;
@@ -53,7 +54,7 @@ const SideModal: React.FC<Props> = ({
       >
         <div>
           <div className={classNames(styles.modalTop, "padding-wrapper")}>
-            <img
+            <Image
               src="/logo-short-white.svg"
               width={34}
               height={28.21}
