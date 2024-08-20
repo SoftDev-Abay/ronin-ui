@@ -85,6 +85,7 @@ const ServicesSection = () => {
             alt="Service"
             width={828}
             height={828}
+            loading="eager"
           />
           <div className="highlight-circle">
             <div className="separarator">
