@@ -62,7 +62,7 @@ const ServicesSection = () => {
   }, [isDesktop, accordionItems]);
 
   if (isDesktop && !imagesLoaded) {
-    return <div>Loading...</div>; // Or any loading spinner or message
+    return null; // Or any loading spinner or message
   }
 
   return (
