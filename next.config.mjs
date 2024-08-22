@@ -5,7 +5,13 @@ const nextConfig = {
   i18n: {
     locales: ["en", "ru"],
     defaultLocale: "ru",
-    // localeDetection: false,
+  },
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV !== 'development',
+  },
+  experimental: {
+    optimizeFonts: true,
   },
 };
 
