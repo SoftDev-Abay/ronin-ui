@@ -6,22 +6,17 @@ import Button from "@/app/components/Button/Button";
 import SideModal from "@/app/components/Modals/SideModal/SideModal";
 import RootModalContent from "./RootModalContent";
 import LanguageToggleButton from "@/app/components/LanguageToggle/LanguageToggleButton";
-import { useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
-import { link } from "fs";
+
+import useLanguageContext from "@/app/context/TranslationContext";
 interface NavigationLink {
   title: string;
   link: string;
 }
 
 const Navbar = () => {
-  const { locale } = useRouter();
+  const { translations } = useLanguageContext();
 
-  const { t } = useTranslation("common");
-
-  const navigationItems = t("wrapper.navigation", {
-    returnObjects: true,
-  }) as NavigationLink[];
+  const navigationItems = translations.wrapper.navigation as NavigationLink[];
 
   const [isShow, setIsShow] = React.useState(false);
 
@@ -61,7 +56,7 @@ const Navbar = () => {
               <a href={item.link}>{item.title}</a>
             ))}
 
-            <Button>{t("wrapper.navbar.action_button")}</Button>
+            <Button>{translations.wrapper.navbar.action_button}</Button>
             <LanguageToggleButton />
           </div>
 

@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 const useScreenWidth = () => {
   // Initialize state with undefined or 0 since we can't access window on the server
   const [width, setWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
+    // typeof window !== "undefined" ? window.innerWidth : 0  // THIS CAUSES A HYDRATION MISMATCH ERROR
+    1024 
   );
 
   useEffect(() => {

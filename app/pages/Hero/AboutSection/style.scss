@@ -45,6 +45,10 @@
   .experience-1 {
     .banner-description-wrapper {
       justify-content: end;
+
+      .column {
+        justify-content: space-between;
+      }
     }
   }
   .experience-2 {

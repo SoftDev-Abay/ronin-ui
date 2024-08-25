@@ -2,17 +2,17 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  i18n: {
-    locales: ["en", "ru"],
-    defaultLocale: "ru",
-  },
   swcMinify: true,
   compiler: {
-    removeConsole: process.env.NODE_ENV !== 'development',
+    removeConsole: process.env.NODE_ENV !== "development",
   },
   experimental: {
     optimizeFonts: true,
   },
+  images: {
+    unoptimized: true,
+  },
+  output: "export",
 };
 
 export default nextConfig;

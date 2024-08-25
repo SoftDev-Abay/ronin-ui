@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev && sass --watch --update --style=expanded styles:styles",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
@@ -13,27 +13,18 @@
     "@emotion/react": "^11.11.4",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.5",
-    "@hookform/resolvers": "^3.6.0",
-    "@mui/material-nextjs": "^5.15.11",
-    "axios": "^1.7.2",
     "classnames": "^2.5.1",
     "framer-motion": "^11.3.19",
     "next": "14.2.3",
-    "next-i18next": "^15.3.1",
-    "next-intl": "^3.14.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.51.5",
-    "react-input-mask": "^2.0.4",
-    "swiper": "^11.1.5",
-    "xss": "^1.0.15"
+    "swiper": "^11.1.5"
   },
   "devDependencies": {
     "@types/dompurify": "^3.0.5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/react-input-mask": "^3.0.5",
     "sass": "^1.77.4",
     "typescript": "^5"
   }

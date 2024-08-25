@@ -2,10 +2,19 @@ import React from "react";
 import styles from "./style.module.scss";
 import GlobusIcon from "@/app/icons/GlobusIcon";
 import Image from "next/image";
+import classNames from "classnames";
 
-const Preloader: React.FC = () => {
+interface PreloaderProps extends React.HTMLAttributes<HTMLDivElement> {
+  isShow: boolean;
+}
+
+const Preloader = ({ isShow }: PreloaderProps) => {
   return (
-    <div className={styles.preloader}>
+    <div
+      className={classNames(styles.preloader, {
+        [styles.hide]: !isShow,
+      })}
+    >
       <Image
         width={1920}
         height={1080}

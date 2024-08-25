@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Button from "@/app/components/Button/Button";
 import "./style.scss";
 import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
@@ -6,6 +6,7 @@ import Navbar from "../../Wrapper/Navbar";
 import dynamic from "next/dynamic";
 import useScreenWidth from "@/app/hooks/useScreenWidth";
 import Image from "next/image";
+import useLanguageContext from "@/app/context/TranslationContext";
 
 // Dynamically import the ScrollSequence component without server-side rendering
 const AnimationController = dynamic(
@@ -16,10 +17,14 @@ const AnimationController = dynamic(
 );
 
 const AnimationTitileSection = () => {
+  const { translations } = useLanguageContext();
+
   const parentRef = React.useRef<HTMLDivElement>(null);
 
   const screenWidth = useScreenWidth();
   const isDesktop = screenWidth > 1104; // Define desktop as greater than 768px
+
+  console.log("translations", translations);
 
   return (
     <div className="  title-section   " ref={parentRef}>
@@ -36,16 +41,20 @@ const AnimationTitileSection = () => {
             />
 
             <h1>
-              Ronin is a <span className="gradient-text">global</span> branding
-              and UX/UI agency
+              {translations.pages.hero.sections.title_section.heading.first}
+              <span className="gradient-text">
+                {translations.pages.hero.sections.title_section.heading.second}
+              </span>
+              {translations.pages.hero.sections.title_section.heading.third}
             </h1>
-            <p>
-              We create effective websites, stunning pitch decks and unique
-              brands.
-            </p>
+
+            <p>{translations.pages.hero.sections.title_section.subheading}</p>
+
             <div className="button-wrapper">
               <Button className="hightlighted-btn">
-                <span>See our services</span>
+                <span>
+                  {translations.pages.hero.sections.title_section.action_button}
+                </span>
                 <ArrowRightIcon width={45} height={45} color="#F3FBFF" />
               </Button>
             </div>

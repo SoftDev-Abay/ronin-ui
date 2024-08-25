@@ -1,10 +1,10 @@
 import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Wrapper from "@/app/pages/Wrapper/Wrapper";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const AnimationTitileSection = dynamic(
-  () => import("@/app/pages/Hero/AnimationTitileSection/AnimationTitileSection"),
+  () =>
+    import("@/app/pages/Hero/AnimationTitileSection/AnimationTitileSection"),
   { ssr: true }
 );
 const PartnersSection = dynamic(
@@ -27,14 +27,6 @@ const FAQSection = dynamic(
   () => import("@/app/pages/Hero/FAQSection/FAQSection"),
   { ssr: false }
 );
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-    },
-  };
-}
 
 const About = () => {
   return (

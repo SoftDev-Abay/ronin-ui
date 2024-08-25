@@ -1,31 +1,17 @@
-import React from "react";
-import { useTransition } from "react";
-import { useRouter } from "next/router";
+import React, { useContext } from "react";
+
 import "./style.scss";
+import useLanguageContext from "@/app/context/TranslationContext";
 
 const LanguageToggleButton: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   className,
   ...props
 }) => {
-  const [isPending, startTransition] = useTransition();
-  const router = useRouter();
-  const localeActive = router.locale;
-  const languages = ["ru", "en"];
+  const { translations, switchLanguage, language } = useLanguageContext();
 
   const onLanguageChange = () => {
-    if (isPending) return;
-
-    const currentLanguageIndex = languages.indexOf(localeActive || "ru");
-    const nextLanguageIndex = (currentLanguageIndex + 1) % languages.length;
-    const nextLocale = languages[nextLanguageIndex];
-
-    startTransition(() => {
-      // Construct the URL preserving query parameters and dynamic segments
-      const pathname = router.pathname; // Gets the current route with dynamic segments like `[id]`
-      const query = { ...router.query }; // Preserve other query parameters and update the locale
-
-      router.push({ pathname, query }, undefined, { locale: nextLocale });
-    });
+    const nextLanguage = language === "ru" ? "en" : "ru";
+    switchLanguage(nextLanguage);
   };
 
   return (
@@ -34,7 +20,7 @@ const LanguageToggleButton: React.FC<React.HTMLProps<HTMLDivElement>> = ({
       onClick={onLanguageChange}
       {...props}
     >
-      {localeActive === "ru" ? "РУ" : "EN"}
+      {language === "ru" ? "РУ" : "EN"}
     </div>
   );
 };

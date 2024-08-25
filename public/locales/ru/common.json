@@ -6,7 +6,7 @@
         "link": "#services"
       },
       {
-        "title": "Работы",
+        "title": "Работа",
         "link": "#work"
       },
       {
@@ -40,43 +40,43 @@
       "sections": {
         "title_section": {
           "heading": {
-            "first": "Ronin — это",
-            "second": " мировое ",
-            "third": "агентство по брендингу и UX/UI"
-            },
-          "subheading": "Мы создаем эффективные веб-сайты, выдающиеся презентации и уникальные бренды.",
-          "action_button": "Смотреть наши услуги"
+            "first": "Ronin —",
+            "second": " глобальное ",
+            "third": "брендинговое и UX/UI агентство."
+          },
+          "subheading": "Мы создаем эффективные веб-сайты, потрясающие презентации и уникальные бренды.",
+          "action_button": "Наши услуги"
         },
         "services": {
           "accordion": [
             {
               "title": "Веб-сайты",
-              "content": "Идентичность вашей компании формируется её онлайн-присутствием. Мы разрабатываем веб-сайты, которые помогают вам достигать бизнес-целей.",
+              "content": "Идентичность вашей компании определяется ее присутствием в Интернете.. Мы создаем веб-сайты, которые помогут вам достичь ваших бизнес-целей.",
               "img": "/imgs/services/Websites.png"
             },
             {
               "title": "Брендинг",
-              "content": "Бренд — это не просто логотип. Мы разрабатываем уникальную идентичность и руководства для обеспечения консистентности коммуникаций.",
+              "content": "Бренд – это больше, чем логотип. Мы разрабатываем уникальный фирменный стиль, в который входят разработка логотипа, бренд-стратегии и многое другое.",
               "img": "/imgs/services/Branding.png"
             },
             {
               "title": "Разработка",
-              "content": "Наши разработчики занимаются всеми этапами разработки приложений, от UX/UI дизайна до внедрения, обеспечивая безупречный пользовательский опыт.",
+              "content": "Наша команда выполняет все этапы разработки приложений, от проектирования UX/UI до верстки, обеспечивая удобство работы с пользователем.",
               "img": "/imgs/services/Development.png"
             },
             {
               "title": "Презентации",
-              "content": "Наши основные усилия в презентациях направлены на питч-деки, корпоративные отчеты и создание визуально привлекательных инфографик.",
+              "content": "Мы - лучшие в питдеках, корпоративных отчетах и создании увлекательной инфографики.",
               "img": "/imgs/services/Presentations.png"
             },
             {
               "title": "Контент",
-              "content": "Контент ключевой для привлечения пользователей. Мы предоставляем услуги копирайтинга, иллюстрации, 3D/2D графики, иконографии, анимации.",
+              "content": "Контент — ключ к привлечению пользователей. Мы занимаемся копирайтингом, иллюстрациями, 3D анимации/2D графикой, иконографикой и анимацией.",
               "img": "/imgs/services/Content.png"
             },
             {
               "title": "Искусственный интеллект",
-              "content": "Ronin интегрирует ИИ для оптимизации процессов и улучшения цифровых продуктов, внедряя новаторские модели взаимодействия в дизайне интерфейсов на основе ИИ.",
+              "content": "Ronin интегрирует ИИ для оптимизации процессов и улучшения цифровых продуктов, внедряя его во все этапы разработки.",
               "img": "/imgs/services/Artificial-Intelligence.png"
             }
           ]
@@ -88,7 +88,7 @@
             "mobile": [
               {
                 "title": "Dunes",
-                "description": "Веб-сайт и цифровой брендинг для инновационной крипто-платформы",
+                "description": "Веб-сайт и цифровой брендинг инновационной криптоплатформы",
                 "imgsURL": [
                   "/imgs/projects/mobile/dunes-mobile-1.png",
                   "/imgs/projects/mobile/dunes-mobile-2.png",
@@ -100,39 +100,31 @@
               },
               {
                 "title": "Motiva",
-                "description": "Передизайн веб-сайта для ведущего мирового производителя имплантатов",
+                "description": "Редизайн веб-сайта ведущего мирового производителя имплантатов",
                 "imgsURL": ["/imgs/projects/mobile/motiva-mobile-1.png"],
-                "categories": [
-                  "Веб-дизайн",
-                  "Система дизайна",
-                  "Визуальная идентичность"
-                ]
+                "categories": ["Веб-дизайн", "Дизайн система", "Айдентика"]
               },
               {
                 "title": "Atafund",
-                "description": "Погружающий веб-сайт для семейного образовательного фонда",
+                "description": "Иммерсивный сайт фонда семейного образования",
                 "imgsURL": ["/imgs/projects/mobile/atafund-mobile-1.png"],
-                "categories": ["Система дизайна", "Веб-дизайн", "Иллюстрация"]
+                "categories": ["Дизайн система", "Веб-дизайн", "Иллюстрация"]
               },
               {
                 "title": "Orbital",
-                "description": "Захватывающие анимации и иллюстрации для инновационного стартапа в сфере блокчейна",
+                "description": "Привлекательная анимация и иллюстрации для революционного блокчейн-стартапа",
                 "imgsURL": ["/imgs/projects/mobile/orbital7-mobile-1.png"],
-                "categories": ["3D", "Система дизайна", "Стартап"]
+                "categories": ["3D анимации", "Дизайн система", "Стартап"]
               },
               {
                 "title": "VestX",
-                "description": "Полноценная подготовка стартапа с нуля: созданы логотип, UI-набор и полный дизайн платформы",
+                "description": "Упаковка стартапа с нуля: созданы логотип, UI-кит и полный дизайн платформы",
                 "imgsURL": ["/imgs/projects/mobile/vestx-mobile-1.png"],
-                "categories": [
-                  "Веб-дизайн",
-                  "Система дизайна",
-                  "Визуальная идентичность"
-                ]
+                "categories": ["Веб-дизайн", "Дизайн система", "Айдентика"]
               },
               {
-                "title": "Казахская Агро Продукция",
-                "description": "Ребрендинг крупного агрохолдинга",
+                "title": "Kazakh Agro Production",
+                "description": "Ребрендинг для крупного агро-холдинга",
                 "imgsURL": [
                   "/imgs/projects/mobile/kazakh-agro-mobile-1.png",
                   "/imgs/projects/mobile/kazakh-agro-mobile-2.png",
@@ -140,14 +132,10 @@
                   "/imgs/projects/mobile/kazakh-agro-mobile-4.png",
                   "/imgs/projects/mobile/kazakh-agro-mobile-5.png"
                 ],
-                "categories": [
-                  "Брендинг",
-                  "Система дизайна",
-                  "Визуальная идентичность"
-                ]
+                "categories": ["Брендинг", "Дизайн система", "Айдентика"]
               },
               {
-                "title": "Иллюстрации для мобильного приложения",
+                "title": "Mobile App Illustrations",
                 "description": "Дизайн персонажей и иллюстрации в стиле приложения Duolingo",
                 "imgsURL": [
                   "/imgs/projects/mobile/illustrations-mobile-1.png",
@@ -170,56 +158,52 @@
               },
               {
                 "title": "Big Sky Capital",
-                "description": "Презентация и веб-сайт для американского венчурного фонда",
+                "description": "Презентация и сайт для американского венчурного фонда",
                 "imgsURL": [
                   "/imgs/projects/mobile/big-sky-capital-mobile-1.png"
                 ],
-                "categories": ["Веб-дизайн", "Система дизайна", "Презентация"]
+                "categories": ["Веб-дизайн", "Дизайн система", "Презентация"]
               }
             ],
             "desktop": [
               {
                 "title": "Dunes",
-                "description": "Веб-сайт и цифровой брендинг для инновационной крипто-платформы",
+                "description": "Веб-сайт и цифровой брендинг инновационной криптоплатформы",
                 "imgURL": "/imgs/projects/Rectangle_13.png",
                 "categories": ["WEB-3", "UX/UI", "Веб-приложение"]
               },
               {
-                "title": "Orbital",
-                "description": "Захватывающие анимации и иллюстрации для инновационного стартапа в сфере блокчейна",
+                "title": "Orbital7",
+                "description": "Привлекательная анимация и иллюстрации для революционного блокчейн-стартапа",
                 "imgURL": "/imgs/projects/Rectangle_14.png",
-                "categories": ["3D", "Система дизайна", "Стартап"]
+                "categories": ["3D анимации", "Дизайн система", "Стартап"]
               },
               {
                 "title": "Atafund",
-                "description": "Погружающий веб-сайт для семейного образовательного фонда",
+                "description": "Иммерсивный сайт фонда семейного образования",
                 "imgURL": "/imgs/projects/Rectangle_15.png",
-                "categories": ["Система дизайна", "Веб-дизайн", "Иллюстрация"]
+                "categories": ["Дизайн система", "Веб-дизайн", "Иллюстрация"]
               },
               {
                 "title": "Motiva",
-                "description": "Передизайн веб-сайта для ведущего мирового производителя имплантатов",
+                "description": "Редизайн веб-сайта ведущего мирового производителя имплантатов",
                 "imgURL": "/imgs/projects/Rectangle_16.png",
-                "categories": [
-                  "Веб-дизайн",
-                  "Система дизайна",
-                  "Визуальная идентичность"
-                ]
+                "categories": ["Веб-дизайн", "Дизайн система", "Айдентика"]
               }
             ]
           }
         },
         "about_us": {
           "bottom_text": {
-            "first": "Ознакомьтесь с ",
+            "first": "Наша статья ",
             "second": "Forbes",
-            "third": "статьей"
+            "third": ""
           },
           "content": {
             "experience": {
               "years": "лет",
-              "combined": "совместного",
-              "experience": "опыта"
+              "combined": "коллективного",
+              "experience": "вместе"
             },
             "countries": {
               "title": "проекты в",
@@ -237,19 +221,19 @@
               "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi laboriosam cum minus ipsum facere corporis sit sunt nisi nobis veritatis quasi voluptas ipsam error quia, ullam, voluptates praesentium repellendus reprehenderit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi laboriosam cum minus ipsum facere corporis sit sunt nisi nobis veritatis quasi voluptas ipsam error quia, ullam, voluptates praesentium repellendus reprehenderit."
             },
             {
-              "title": "Чем Ронин отличается от других дизайнерских агентств?",
+              "title": "Что отличает Ronin от других дизайнерских агентств?",
               "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, cupiditate! Corrupti vero numquam iusto ex fugiat quos saepe quidem, consequatur nobis nesciunt earum natus quod corporis praesentium libero repellendus nulla exercitationem veritatis quaerat unde harum ratione. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, cupiditate! Corrupti vero numquam iusto ex fugiat quos saepe quidem, consequatur nobis nesciunt earum natus quod corporis praesentium libero repellendus nulla exercitationem veritatis quaerat unde harum ratione."
             },
             {
-              "title": "Вы готовы работать со стартапами?",
+              "title": "Вы открыты для сотрудничества со стартапами?",
               "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu"
             },
             {
-              "title": "Вы работаете с клиентами из разных часовых поясов?",
+              "title": "Вы работаете с клиентами в разных часовых поясах?",
               "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu"
             },
             {
-              "title": "Можете ли вы помочь нам с редизайном нашего ПО для В2В/корпоративного сегмента?",
+              "title": "Можете ли вы помочь нам в обновлении нашего программного обеспечения для B2B/корпоративного использования?",
               "content": "Lorem quam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu Lorem quam, quod. Quisquam, quod. Quisquam, qu Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, qu"
             }
           ]

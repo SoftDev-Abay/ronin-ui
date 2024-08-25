@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import Accordion from "@/app/components/Accordion/Accordion";
 
 import "./style.scss";
-import { useTranslation } from "next-i18next";
+
 import NextImage from "next/image";
 import useScreenWidth from "@/app/hooks/useScreenWidth";
+import useLanguageContext from "@/app/context/TranslationContext";
 
 interface AccordionItem {
   title: string;
@@ -13,16 +14,15 @@ interface AccordionItem {
 }
 
 const ServicesSection = () => {
-  const { t } = useTranslation();
-
   const width = useScreenWidth();
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   const isDesktop = width > 1115;
 
-  const accordionItems = t("pages.hero.sections.services.accordion", {
-    returnObjects: true,
-  }) as AccordionItem[];
+  const { translations } = useLanguageContext();
+
+  const accordionItems = translations.pages.hero.sections.services
+    .accordion as AccordionItem[];
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 

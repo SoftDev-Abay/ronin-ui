@@ -1,15 +1,31 @@
 @use "../../../styles/colors.scss" as *;
 
 .preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+
   width: 100vw;
   height: 100vh;
   background-color: $color-secondary;
+  display: block;
+  transition: 1s ease-in-out;
+  opacity: 0.7s;
+
+  z-index: 9999;
+
   img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+  }
+
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
   }
 }
 

@@ -3,8 +3,9 @@ import "./style.scss";
 import InstagramIcon from "@/app/icons/InstagramIcon";
 import TwitterIcon from "@/app/icons/TwitterIcon";
 import BehanceIcon from "@/app/icons/BehanceIcon";
-import { useTranslation } from "next-i18next";
+
 import Image from "next/image";
+import useLanguageContext from "@/app/context/TranslationContext";
 
 interface NavigationLink {
   title: string;
@@ -12,11 +13,9 @@ interface NavigationLink {
 }
 
 const Footer = () => {
-  const { t } = useTranslation("common");
+  const { translations } = useLanguageContext();
 
-  const navigationItems = t("wrapper.navigation", {
-    returnObjects: true,
-  }) as NavigationLink[];
+  const navigationItems = translations.wrapper.navigation as NavigationLink[];
 
   return (
     <div className="footer">
@@ -33,14 +32,14 @@ const Footer = () => {
               <TwitterIcon width={35} height={35} />
               <BehanceIcon width={35} height={35} />
             </div>
-            <p className="email">{t("wrapper.footer.email")}</p>
+            <p className="email">{translations.wrapper.footer.email}</p>
           </div>
           <p className="company">
             <span className="long-text">
-              {t("wrapper.footer.copyright_long")}
+              {translations.wrapper.footer.copyright_long}
             </span>
             <span className="short-text">
-              {t("wrapper.footer.copyright_short")}
+              {translations.wrapper.footer.copyright_short}
             </span>
           </p>
         </div>
@@ -54,7 +53,7 @@ const Footer = () => {
               height={444}
             />
           </div>
-          <p className="rights">{t("wrapper.footer.rights")}</p>
+          <p className="rights">{translations.wrapper.footer.rights}</p>
         </div>
       </div>
     </div>

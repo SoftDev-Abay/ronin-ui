@@ -5,10 +5,10 @@ import ProjectsMobile from "./Projects/Mobile/ProjectsMobile";
 import Button from "@/app/components/Button/Button";
 import "./style.scss";
 import ArrowRightIcon from "@/app/icons/ArrowRightIcon";
-import { useTranslation } from "next-i18next";
+import useLanguageContext from "@/app/context/TranslationContext";
 
 const PortfolioSection = () => {
-  const { t } = useTranslation();
+  const { translations } = useLanguageContext();
 
   // determine if current device is mobile or desktop
 
@@ -39,14 +39,14 @@ const PortfolioSection = () => {
       // id="portfolio"
     >
       <h1 className="title gradient-text">
-        {t("pages.hero.sections.work.header")}
+        {translations.pages.hero.sections.work.header}
       </h1>
 
       {isMobile ? <ProjectsMobile /> : <ProjectsDesktop />}
 
       <div className="mobile-button-wrapper">
         <Button className="hightlighted-btn">
-          <span>{t("pages.hero.sections.work.action_button")}</span>
+          <span>{translations.pages.hero.sections.work.action_button}</span>
           <ArrowRightIcon width={45} height={45} color="#F3FBFF" />
         </Button>
       </div>

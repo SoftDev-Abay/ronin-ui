@@ -9,7 +9,8 @@ import { Autoplay } from "swiper/modules";
 
 import ProjectModalContent from "./ProjectModalContent/ProjectModalContent";
 import CenterModal from "@/app/components/Modals/CenterModal/CenterModal";
-import { useTranslation } from "next-i18next";
+import useLanguageContext from "@/app/context/TranslationContext";
+
 interface Project {
   title: string;
   description: string;
@@ -18,11 +19,14 @@ interface Project {
 }
 
 const ProjectsMobile = () => {
-  const { t } = useTranslation();
+  
 
-  const projects = t("pages.hero.sections.work.projects.mobile", {
-    returnObjects: true,
-  }) as Project[];
+  const { translations } = useLanguageContext();
+
+
+
+  const projects = translations.pages.hero.sections.work.projects
+  .mobile as Project[];
 
   const [isShow, setIsShow] = React.useState(false);
 

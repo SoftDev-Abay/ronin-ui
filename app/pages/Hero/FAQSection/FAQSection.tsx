@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.scss";
 import SpecialAccordion from "@/app/components/SpecialAccordion/SpecialAccordion";
-import { useTranslation } from "next-i18next";
+import useLanguageContext from "@/app/context/TranslationContext";
 
 interface AccordionItem {
   title: string;
@@ -11,11 +11,10 @@ interface AccordionItem {
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const { t } = useTranslation("common");
+  const { translations } = useLanguageContext();
 
-  const accordionItems = t("pages.hero.sections.faq.accordion", {
-    returnObjects: true,
-  }) as AccordionItem[];
+  const accordionItems = translations.pages.hero.sections.faq
+    .accordion as AccordionItem[];
 
   return (
     <div
@@ -24,7 +23,7 @@ const FAQSection = () => {
     >
       <div className="faq-section-container">
         <h1 className="faq-section-title gradient-text">
-          {t("pages.hero.sections.faq.header")}
+          {translations.pages.hero.sections.faq.header}
         </h1>
         <SpecialAccordion
           items={accordionItems}
